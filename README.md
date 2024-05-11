@@ -1,4 +1,4 @@
-# GRUPO 02 - CODIGOTRUKO130
+# GRUPO 03 - CODIGOTRUKO130
 
 ## Integrantes:
 
