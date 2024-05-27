@@ -11,59 +11,89 @@
 }
 
 
-/*********** VISTA DE PC ***********/
-.main-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-}
+@media (min-width : 600px) and (max-width : 1024px) {
 
-.main-title {
-    background-color: #003C43;
-    color: #FFFFFF;
-    font-size: 2rem;
-}
+    .main-scan-container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
 
-.camera-container {
-    background-color: #FFFFFF;
-    height: 45vh;
-    width: 25vw;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .back-container {
+        width: 100%;
+        height: 10%;
+    }
 
-.camera-view {
-    background-color: #FFFFFF;
-    width: 90%;
-    height: 90%;
-}
+    .back-button {
+        width: 15%;
+        height: 100%;
+        margin-left: 4rem ;
+    }
 
-.scan-button-container {
-    background-color: #34DD5A;
-    width: 18vw;
-    height: 10vh;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .back-img {
+        width: 100%;
+        height: 100%;
+    }
 
-.scan-qr-button {
-    background-color: #34DD5A;
-    border-color: #34DD5A;
-    width: 100%;
-    height: 100%;
-    border-radius: 1rem;
-}
+    .main-title {
+        background-color: #003C43;
+        color: #FFFFFF;
+        font-size: 3rem;
+        font-weight: bold;
+    }
 
-.button-text {
-    background-color: #34DD5A;
-    color: white;
-    font-size: 1.5rem;
+    .camera-container {
+        background-color: #FFFFFF;
+        height: 45vh;
+        width: 65vw;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .camera-view {
+        background-color: #FFFFFF;
+        width: 90%;
+        height: 90%;
+    }
+
+    .scan-button-container {
+        background-color: #34DD5A;
+        width: 40vw;
+        height: 10vh;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .scan-qr-button {
+        background-color: #34DD5A;
+        border-color: #34DD5A;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .scan-img {
+        height: 75%;
+        width: 25%;
+        background: none;
+    }
+
+    .button-text {
+        background-color: #34DD5A;
+        color: white;
+        font-size: 2rem;
+    }
+
 }
