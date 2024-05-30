@@ -1,4 +1,4 @@
-package com.codigotruko.api.domain.dtos;
+package com.codigotruko.api.domain.dtos.auth;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
