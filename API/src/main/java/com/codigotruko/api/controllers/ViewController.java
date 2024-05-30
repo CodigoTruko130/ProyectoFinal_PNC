@@ -1,6 +1,6 @@
 package com.codigotruko.api.controllers;
 
-import com.codigotruko.api.domain.dtos.ProfileResponseDTO;
+import com.codigotruko.api.domain.dtos.user.UserProfileResponseDTO;
 import com.codigotruko.api.domain.entities.User;
 import com.codigotruko.api.services.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -40,13 +40,13 @@ public class ViewController {
     public String profileUser(@PathVariable String username, Model model) {
         User user = userService.findByIdentifier(username);
 
-        if (user == null || !user.getEnabled()) {
+        if (user == null || !user.getActive()) {
             return "the-error";
         }
-        ProfileResponseDTO userProfileDTO = new ProfileResponseDTO();
+        UserProfileResponseDTO userProfileDTO = new UserProfileResponseDTO();
         userProfileDTO.setUsername(user.getUsername());
         userProfileDTO.setEmail(user.getEmail());
-        userProfileDTO.setRol(user.getRol());
+        userProfileDTO.setRol(user.getRole());
         model.addAttribute("user", userProfileDTO);
         return "main-profile";
     }
