@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bgColor: #003C43;
+    --bgColor2: #0DC595;
+    --textColor: #0B666A;
+}
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+p{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+b{
+    background-color: transparent;
+}
+
+@media(max-width:600px) {
+    .main-container-profile{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .profile-info-img{
+        background-color: transparent;
+        width: 50%;
+        margin-top: 5%;
+    }
+
+    .subtitle-profile{
+        background-color: transparent;
+        color: black;
+        font-size: larger;
+        font-weight: bold;
+        margin-top: 1%;
+    }
+
+    .text-profile{
+        background-color: transparent;
+        color: black;
+        font-size: small;
+    }
+
+    .home-info{
+        background-color: transparent;
+        color: black;
+        margin-top: 5%;
+    }
+
+    .title{
+        background-color: transparent;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 5%;
+    }
+
+    .info-grid{
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        border-color: transparent;
+        background-color: white;
+        height: 100%;
+    }
+
+    .column-profile{
+        background-color: white;
+        border-color: transparent;
+        margin-top: 5%;
+    }
+
+    .grid-title{
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        border-color: transparent;
+    }
+    
+    .grid-info{
+        background-color: white;
+        color: black;
+        border-color: transparent;
+    }
+}
