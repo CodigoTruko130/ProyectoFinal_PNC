@@ -3,11 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import '../../style/GuardView/ScanQR.css';
 
 function ScanQR() {
-
   // Navegar a otras paginas.
   const navigate = useNavigate();
 
-  const navigateToMainGuardView = () => {
+  const navToMainGuardView = () => {
     navigate('/');
   };
 
@@ -43,7 +42,7 @@ function ScanQR() {
   return (
     <div className="main-scan-container">
         <div className="back-container">
-          <button onClick={ navigateToMainGuardView } className="back-button"><img src="./GuardView/back.png" className="back-img" alt="Boton para ir hacia pagina anterior."/></button>
+          <button onClick={ navToMainGuardView } className="back-button"><img src="./GuardView/whiteBack.png" className="back-img" alt="Boton para ir hacia pagina anterior."/></button>
         </div>
 
         <p className="main-title">Escanear Código QR</p>

@@ -6,9 +6,13 @@ function QR_Page () {
 
     const navigate = useNavigate();
 
-    const navigateToScanQR = () => {
+    const navToScanQR = () => {
         navigate('/ScanQR');
-      };
+    };
+
+    const navToRegVisitView = () => {
+        navigate('/RegisterVisit');
+    };
 
     return (
         <>
@@ -35,11 +39,11 @@ function QR_Page () {
 
                 <div className="buttons-container">
                     <div className="button-container">
-                        <button className="scan-page-button" onClick={navigateToScanQR}><p className="main-button-text">Escanear QR</p></button>
+                        <button onClick={ navToScanQR } className="scan-page-button"><p className="main-button-text">Escanear QR</p></button>
                     </div>
 
                     <div className="button-container">
-                        <button className="scan-page-button"><p className="main-button-text">Registrar Visita</p></button>
+                        <button onClick={ navToRegVisitView } className="scan-page-button"><p className="main-button-text">Registrar Visita</p></button>
                     </div>
 
                     <div className="utils-container">
