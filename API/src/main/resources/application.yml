@@ -1,0 +1,42 @@
+#spring.application.name=ControllersSec02
+#spring.mustache.suffix=.html
+spring:
+    application:
+        name: ControllersSec02
+    mustache:
+        suffix: .html
+    datasource:
+        url: jdbc:postgresql://localhost:5500/library
+        username: postgres
+        password: 12345678aA!
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                globally_quoted_identifiers: true
+    sql:
+        init:
+            mode: always
+
+
+
+    #security:
+    #    oauth2:
+    #        client:
+    #            registration:
+    #                google:
+    #                    clientId: 851868671234-u9ll7dnvslhlkk5di89j8q8cn350dl6q.apps.googleusercontent.com
+    #                    clientSecret: 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
+    #                    redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+    #                    scope:
+    #                        - email
+    #                        - profile
+    #            provider:
+    #                google:
+    #                    authorizationUri: https://accounts.google.com/o/oauth2/auth
+    #                    tokenUri: https://oauth2.googleapis.com/token
+    #                    userInfoUri: https://openidconnect.googleapis.com/v1/userinfo
+    #                    userNameAttribute: sub
+
