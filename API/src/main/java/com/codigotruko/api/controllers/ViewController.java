@@ -40,13 +40,12 @@ public class ViewController {
     public String profileUser(@PathVariable String username, Model model) {
         User user = userService.findByIdentifier(username);
 
-        if (user == null || !user.getEnabled()) {
+        if (user == null || !user.getActive()) {
             return "the-error";
         }
-        ProfileResponseDTO userProfileDTO = new ProfileResponseDTO();
+        UserProfileResponseDTO userProfileDTO = new UserProfileResponseDTO();
         userProfileDTO.setUsername(user.getUsername());
         userProfileDTO.setEmail(user.getEmail());
-        userProfileDTO.setRol(user.getRol());
         model.addAttribute("user", userProfileDTO);
         return "main-profile";
     }

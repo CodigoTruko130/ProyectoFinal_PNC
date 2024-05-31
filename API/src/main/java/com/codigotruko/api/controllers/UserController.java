@@ -1,10 +1,7 @@
 package com.codigotruko.api.controllers;
 
 import com.codigotruko.api.domain.dtos.*;
-import com.codigotruko.api.domain.dtos.user.UserDeleteRequestDTO;
-import com.codigotruko.api.domain.dtos.user.UserProfileResponseDTO;
-import com.codigotruko.api.domain.dtos.user.UserToggleActiveRequestDTO;
-import com.codigotruko.api.domain.dtos.user.UserUpdatePasswordRequestDTO;
+import com.codigotruko.api.domain.dtos.user.*;
 import com.codigotruko.api.domain.entities.User;
 import com.codigotruko.api.services.UserService;
 import jakarta.validation.Valid;
@@ -50,19 +47,27 @@ public class UserController {
     }
 
     @GetMapping("/{username}")
-    public ResponseEntity<GeneralResponse> getProfile(@PathVariable String username) {
-        User user = userService.findByIdentifier(username);
+    public ResponseEntity<GeneralResponse> getProfile(@AuthenticationPrincipal User user, @PathVariable String username) {
+        User userObjective = userService.findByIdentifier(username);
 
         if (user == null || !user.getActive()) {
             return GeneralResponse.getResponse(HttpStatus.NOT_FOUND, "User not found");
         }
 
-        UserProfileResponseDTO userProfileDTO = new UserProfileResponseDTO();
-        userProfileDTO.setUsername(user.getUsername());
-        userProfileDTO.setEmail(user.getEmail());
-        userProfileDTO.setRol(user.getRole());
+        if(user.getUsername().equals(userObjective.getUsername())){
+            UserOwnerProfileResponseDTO userProfileDTO = new UserOwnerProfileResponseDTO();
+            userProfileDTO.setUsername(user.getUsername());
+            userProfileDTO.setEmail(user.getEmail());
+            userProfileDTO.setRol(user.getRole());
+            return GeneralResponse.getResponse("User found", userProfileDTO);
+        }
+        else{
+            UserProfileResponseDTO userProfileDTO = new UserProfileResponseDTO();
+            userProfileDTO.setUsername(userObjective.getUsername());
+            userProfileDTO.setEmail(userObjective.getEmail());
 
-        return GeneralResponse.getResponse("User found", userProfileDTO);
+            return GeneralResponse.getResponse("User found", userProfileDTO);
+        }
 
     }
 
