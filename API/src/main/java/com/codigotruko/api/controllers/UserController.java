@@ -46,6 +46,7 @@ public class UserController {
         return GeneralResponse.getResponse("Toggle Active");
     }
 
+
     @GetMapping("/{username}")
     public ResponseEntity<GeneralResponse> getProfile(@AuthenticationPrincipal User user, @PathVariable String username) {
         User userObjective = userService.findByIdentifier(username);
@@ -70,6 +71,7 @@ public class UserController {
         }
 
     }
+
 
 
     @DeleteMapping("/delete")
