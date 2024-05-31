@@ -14,6 +14,10 @@ function QR_Page () {
         navigate('/RegisterVisit');
     };
 
+    const navToListOfVisits = () => {
+        navigate('/ListOfVisits');
+    }
+
     return (
         <>
             <div className="main-container">
@@ -51,7 +55,7 @@ function QR_Page () {
                             <img src="./GuardView/pluma.png" className="utils-img" alt="Foto de Perfil" />
                         </button>
                         <button className="utils-button">
-                            <img src="./GuardView/registerVisit.png" className="utils-img" alt="Foto de Perfil" />
+                            <img onClick={ navToListOfVisits } src="./GuardView/registerVisit.png" className="utils-img" alt="Foto de Perfil" />
                         </button>
                     </div>
                 </div>

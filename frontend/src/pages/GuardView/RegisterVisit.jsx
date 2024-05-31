@@ -30,7 +30,7 @@ function RegisterVisit() {
     return (
         <div className="regVisit-main-container">
             <div className="regVisit-header">
-                <button onClick={navToMainGuardView} className="back-reg-button">
+                <button onClick={ navToMainGuardView } className="back-reg-button">
                     <img src="./GuardView/blackBack.png" className="back-reg-img" alt="Boton para ir hacia pagina anterior." />
                 </button>
             </div>
@@ -40,9 +40,9 @@ function RegisterVisit() {
                 <textarea
                     className="regVisit-reason-input"
                     placeholder="Asunto de visita"
-                    value={visitInfo}
+                    value={ visitInfo }
                     onChange={handleTextareaChange}
-                    ref={textareaRef}
+                    ref={ textareaRef }
                     rows="1"
                 />
                 <button className="regVisit-button">

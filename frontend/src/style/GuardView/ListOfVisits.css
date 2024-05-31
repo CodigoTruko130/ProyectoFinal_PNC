@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --bgColor: #003C43;
+    --textColor: #0B666A;
+}
+
 * {
     font-family: "Montserrat", sans-serif;
     background-color: var(--bgColor);
 }
 
-@media (min-width : 600px) and (max-width : 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
 
-    .regVisit-main-container {
+    /* HEADER */
+    .listVisit-main-container {
         height: 100vh;
         width: 100vw;
         background-color: white;
@@ -16,16 +22,16 @@
         align-items: center;
     }
 
-    .regVisit-header {
+    .listVisit-header {
         width: 100%;
         height: 10%;
         background-color: white;
-        margin-bottom: 2rem;
         display: flex;
         align-items: center;
+        margin-bottom: 1rem;
     }
 
-    .back-reg-button {
+    .back-list-button {
         width: 15%;
         height: 100%;
         margin: 1rem 0 0 1rem;
@@ -34,58 +40,75 @@
         outline: none;
     }
 
-    .back-reg-img {
+    .back-list-img {
         width: 60%;
         height: 60%;
         background: none;
     }
 
-    .regVisit-main {
+    .list-text {
+        flex-grow: 1;
+        background: none;
+        color: black;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 0 15%;
+    }
+
+    /* MAIN CONTENT */
+    .listVisit-main {
         width: 100%;
         height: 80%;
         background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2.5rem;
+        overflow-y: auto;
     }
 
-    .reg-text {
-        background: none;
-        color: black;
-        font-size: 6rem;
+    .user-visit-container {
+        width: 90%;
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1rem 0;
+    }
+
+    .profile-pic-img {
+        width: 10vh;
+        height: 10vh;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .information-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        gap: 0.5rem;
+    }
+
+    .user-name-text {
+        font-size: 1.5rem;
         font-weight: bold;
-        margin: 4rem 0 8rem 0;
+        color: black;
     }
 
-    .regVisit-input, .regVisit-reason-input {
-        width: 60%;
-        padding: 2.5rem;
-        background-color: #77B0AA;
-        color: white;
-        outline: none;
-        font-size: 2.5rem;
-        border-radius: 1rem;
-        resize: none;
-        overflow: hidden;
-        box-sizing: border-box;
+    .invitation-text {
+        font-size: 1.2rem;
+        color: black;
     }
 
-    .regVisit-input::placeholder, .regVisit-reason-input::placeholder {
-        color: white;
+    .user-visit-container, .profile-pic-img, 
+    .user-name-text, .information-container, 
+    .invitation-text {
+        background-color: white;
     }
 
-    .regVisit-button {
-        width: 30%;
-        padding: 2rem;
-        border-radius: 1rem;
-        margin: 2rem 0 0 0;
-        background-color: #01343D;
-        color: white;
-        border: none;
-    }
-
-    .regVisit-button-text {
-        font-size: 2.5rem;
+    .line-img {
+        width: 90%;
+        max-width: 600px;
     }
 }
