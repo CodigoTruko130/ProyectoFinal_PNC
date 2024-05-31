@@ -46,7 +46,6 @@ public class ViewController {
         UserProfileResponseDTO userProfileDTO = new UserProfileResponseDTO();
         userProfileDTO.setUsername(user.getUsername());
         userProfileDTO.setEmail(user.getEmail());
-        userProfileDTO.setRol(user.getRole());
         model.addAttribute("user", userProfileDTO);
         return "main-profile";
     }
