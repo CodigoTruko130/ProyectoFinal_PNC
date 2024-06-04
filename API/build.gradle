@@ -22,41 +22,46 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    /*
-    implementation 'org.springframework.boot:spring-boot-starter-mustache'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    //implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
-    //implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-    //implementation 'org.springframework.boot:spring-boot-starter-security'
-    //testImplementation 'org.springframework.security:spring-security-test'
-    //implementation 'org.springframework.boot:spring-boot-starter-security'
-    //implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-    //testImplementation 'org.springframework.security:spring-security-test'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    runtimeOnly 'org.postgresql:postgresql'
-    */
 
+dependencies {
+    // Spring Boot Starters
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    testImplementation 'org.springframework.security:spring-security-test'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Database
     runtimeOnly 'org.postgresql:postgresql'
+
+    // Jackson
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'com.fasterxml.jackson.core:jackson-core'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations'
+
+    // JWT Support con Jackson
     implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
     implementation 'io.jsonwebtoken:jjwt-impl:0.12.5'
     implementation 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+
+    // Google API Client (para la validación de tokens de Google)
+    implementation 'com.google.api-client:google-api-client:1.32.1'
+
+    // Google HTTP client con soporte para Jackson 2
+    implementation 'com.google.http-client:google-http-client-jackson2:1.40.1' // Asegúrate de usar la versión más reciente
+
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Spring Boot Testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
 }
+
 
 tasks.named('test') {
     useJUnitPlatform()

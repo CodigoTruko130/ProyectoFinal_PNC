@@ -20,27 +20,24 @@ spring:
     #    init:
     #        mode: always
 
+
+    security:
+        oauth2:
+            client:
+                registration:
+                    google:
+                        clientId: 851868671234-u9ll7dnvslhlkk5di89j8q8cn350dl6q.apps.googleusercontent.com
+                        clientSecret: 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
+                        redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+                        scope: profile, email
+
+                provider:
+                    google:
+                        authorizationUri: https://accounts.google.com/o/oauth2/auth
+                        tokenUri: https://oauth2.googleapis.com/token
+                        userInfoUri: https://openidconnect.googleapis.com/v1/userinfo
+                        userNameAttribute: sub
+
 jwt:
     secret: "94c9b14f-b497-4f25-bc02-4f5e1a512c3d"
     exptime: 1296000000
-
-
-
-    #security:
-    #    oauth2:
-    #        client:
-    #            registration:
-    #                google:
-    #                    clientId: 851868671234-u9ll7dnvslhlkk5di89j8q8cn350dl6q.apps.googleusercontent.com
-    #                    clientSecret: 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
-    #                    redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
-    #                    scope:
-    #                        - email
-    #                        - profile
-    #            provider:
-    #                google:
-    #                    authorizationUri: https://accounts.google.com/o/oauth2/auth
-    #                    tokenUri: https://oauth2.googleapis.com/token
-    #                    userInfoUri: https://openidconnect.googleapis.com/v1/userinfo
-    #                    userNameAttribute: sub
-
