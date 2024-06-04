@@ -2,6 +2,7 @@
 
 :root{
     --bgColor: #003C43;
+    --bgColor2: #0DC595;
     --textColor: #0B666A;
 }
 
@@ -17,84 +18,41 @@ p{
 }
 
 @media(max-width:600px){
-    .main-container{
-        height: 100vh; /* Asegura que el contenedor abarque toda la vista */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .subtitle{
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 0;
-        padding: 0;
-    }
-
-    .main-title{
-        font-size: 6rem;
-        font-weight: bold;
-        margin: 0;
-        padding: 0;
-        height: fit-content;
-    }
-
-    .image-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }    
-
-    .house{
-        width: 70%;
-        margin-top: 5%;
-    }
-
-    .button-container{
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    button{
+    .qr{
+        width: 60%;
+        padding: 5%;
         background-color: #FFFFFF;
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
 
-    .login-btn{
+    .main-btn{
+        width: 70%;
+        padding: 3% 0;
+        font-weight: bold;
+        font-size: medium;
+        margin: 2% 0;
+        border-color: transparent;
+        border-radius: 10px;
+    }
+
+    .action-btn{
+        border-color: transparent;
+        border-radius:  100vh;
+        width: 20%;
+        padding: 3.5% 4%;
+        margin: 3%;
+    }
+
+
+    .btn-image{
+        width: 100%;
+        background-color: white;
+    }
+
+    .buttons{
         display: flex;
         align-items: center;
         justify-content: center;
-        border-color: transparent;
-        margin-top: 20%;
-        padding: 2% 5%;
-        border-radius: 5vh;
-        width: 80%;
     }
-
-    .register-btn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-color: transparent;
-        margin-top: 5%;
-        padding: 2% 5%;
-        border-radius: 5vh;
-        width: 80%;
-    }
-
-    .google{
-        background-color: transparent;
-    }
-
-    .main-text{
-        background-color: transparent;
-        color: var(--textColor);
-        font-size: large;
-        font-weight: 700;
-        padding-left: 5%;
-    }
-
-
 }

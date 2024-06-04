@@ -6,9 +6,9 @@ spring:
     mustache:
         suffix: .html
     datasource:
-        url: jdbc:postgresql://localhost:5500/hvls_db
-        username: rosita
-        password: codigotrukocapas
+        url: jdbc:postgresql://localhost:5500/library
+        username: postgres
+        password: 12345678aA!
     jpa:
         show-sql: true
         hibernate:
@@ -16,6 +16,7 @@ spring:
         properties:
             hibernate:
                 globally_quoted_identifiers: true
+
     #sql:
     #    init:
     #        mode: always
