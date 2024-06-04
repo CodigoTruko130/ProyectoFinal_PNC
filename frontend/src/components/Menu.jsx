@@ -1,5 +1,6 @@
 import React from 'react'
 import "../style/components/Menu.css"
+import  SignIn from '../components/GoogleButton';
 
 function Menu() {
   return (
@@ -25,6 +26,7 @@ function Menu() {
                     <img src="logos/logout.png" alt="" className='menu-icon'/>
                     <p className='menu-text'>Salir</p>
                 </div>
+                <SignIn/>
             </div>
         </div>
     </>

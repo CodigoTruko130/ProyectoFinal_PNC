@@ -1,6 +1,7 @@
 package com.codigotruko.api.services.implementations;
 
 import com.codigotruko.api.domain.dtos.auth.GoogleUserRegisterDTO;
+import com.codigotruko.api.domain.dtos.auth.UserLoginDTO;
 import com.codigotruko.api.domain.dtos.auth.UserRegisterDTO;
 import com.codigotruko.api.domain.entities.Token;
 import com.codigotruko.api.domain.entities.User;
@@ -33,31 +34,18 @@ public class UserServiceImp implements UserService {
 
     @Override
     @Transactional(rollbackOn = Exception.class)
-    public void create(UserRegisterDTO info) {
-        User user = new User();
-        user.setUsername(info.getUsername());
-        user.setPassword(passwordEncoder.encode(info.getPassword()));
+    public void create(UserLoginDTO info) {
+        User user = findByIdentifier(info.getName());
+        if(user == null) {
+            user = new User();
+        }
+        user.setUsername(info.getName());
         user.setEmail(info.getEmail());
+        user.setPicture(info.getPicture());
         user.setRole("ROLE_USER");
         userRepository.save(user);
     }
 
-    @Override
-    @Transactional(rollbackOn = Exception.class)
-    public void createWithGoogle(GoogleUserRegisterDTO info) {
-        User newUser = new User();
-        newUser.setGoogleId(info.getGoogleId());
-
-        //newUser.setToken(info.getAccessToken());
-
-        newUser.setEmail(info.getEmail());
-        newUser.setUsername(info.getUsername());
-        newUser.setPassword("12345678aA!");
-        newUser.setImageUrl(info.getImageUrl());
-
-        newUser.setRole("ROLE_USER");
-        userRepository.save(newUser);
-    }
 
     @Override
     public List<User> findAll() {
@@ -93,16 +81,6 @@ public class UserServiceImp implements UserService {
         return userRepository.findByUsernameOrEmail(identifier, identifier).orElse(null);
     }
 
-    @Override
-    public User findByGoogleId(String googleId) {
-        return userRepository.findByGoogleId(googleId).orElse(null);
-    }
-
-
-    @Override
-    public boolean checkPassword(User user, String password) {
-        return passwordEncoder.matches(password, user.getPassword());
-    }
 
     @Override
     public boolean checkRole(User user, String role){
@@ -175,15 +153,6 @@ public class UserServiceImp implements UserService {
         return userRepository.findByUsernameOrEmail(username, username).orElse(null);
     }
 
-    @Override
-    @Transactional(rollbackOn = Exception.class)
-    public void updatePassword(String identifier, String newPassword){
-        User user = findByIdentifier(identifier);
-        if (user == null) {
-            throw new EntityNotFoundException("User not found with identifier: " + identifier);
-        }
-        user.setPassword(passwordEncoder.encode(newPassword));
-        userRepository.save(user);
-    }
+
 
 }

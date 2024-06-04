@@ -18,9 +18,8 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private String googleId;
     private String username;
-    private String imageUrl;
+    private String picture;
     private String email;
     private String password;
     private String role;

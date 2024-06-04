@@ -6,8 +6,7 @@ import lombok.Data;
 
 @Data
 public class UserLoginDTO {
-    private String Identifier;
-    @NotBlank(message = "La contraseña no puede estar vacía")
-    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$", message = "La contraseña debe tener al menos 8 caracteres, incluir mayúsculas, minúsculas, números y caracteres especiales")
-    private String password;
+    private String name;
+    private String picture;
+    private String email;
 }

@@ -28,76 +28,13 @@ public class AuthController {
     }
 
 
-    @PostMapping("/register")
-    public ResponseEntity<GeneralResponse> register(@RequestBody @Valid UserRegisterDTO info){
-
-        User user = userService.findByUsernameOrEmail(info.getUsername(), info.getEmail());
-        if(user != null){
-            return GeneralResponse.getResponse(HttpStatus.CONFLICT, "User already exists");
-        }
-
-        userService.create(info);
-        return GeneralResponse.getResponse(HttpStatus.CREATED, "User registered successfully");
-    }
-
-    @PostMapping("/register-google")
-    public ResponseEntity<GeneralResponse> registerWithGoogle(@RequestBody @Valid GoogleUserRegisterDTO info){
-
-        User user = userService.findByUsernameOrEmail(info.getUsername(), info.getEmail());
-        if(user != null){
-            return GeneralResponse.getResponse(HttpStatus.CONFLICT, "User already exists");
-        }
-
-        userService.createWithGoogle(info);
-        return GeneralResponse.getResponse(HttpStatus.CREATED, "User registered successfully");
-    }
-
-
     @PostMapping("/login")
     public ResponseEntity<GeneralResponse> login(@RequestBody @Valid UserLoginDTO info, BindingResult validations) throws Exception {
-        User user = userService.findByIdentifier(info.getIdentifier());
-        if(user == null){
-            return GeneralResponse.getResponse(HttpStatus.CONFLICT, "User not found");
-        }
-
-        if(!userService.checkPassword(user, info.getPassword()) || !userService.isActive(user)){
-            return GeneralResponse.getResponse(HttpStatus.NOT_FOUND, "User not found");
-        }
-
+        userService.create(info);
+        User user = userService.findByIdentifier(info.getName());
         Token token = userService.registerToken(user);
         return GeneralResponse.getResponse(HttpStatus.OK, new TokenDTO(token));
     }
 
-    @PostMapping("/login-google")
-    public ResponseEntity<GeneralResponse> loginWithGoogle(@RequestBody @Valid GoogleUserLoginDTO info){
-        User user = userService.findByGoogleId(info.getGoogleId());
-        if(user == null){
-            return GeneralResponse.getResponse(HttpStatus.CONFLICT, "User not found");
-        }
 
-        if(!userService.isActive(user) ){
-            return GeneralResponse.getResponse(HttpStatus.NOT_FOUND, "User not found");
-        }
-
-        //userService.updateToken(user, info.getAccessToken());
-
-        return GeneralResponse.getResponse(HttpStatus.OK, "User logged in successfully");
-
-    }
-
-
-/*
-    @PostMapping("/register-google")
-    public ResponseEntity<GeneralResponse> registerWithGoogle(@RequestBody @Valid GoogleUserRegisterDTO info) {
-        User user = userService.findByGoogleId(info.getGoogleId());
-        if (user != null) {
-            return GeneralResponse.getResponse(HttpStatus.CONFLICT, "User already exists");
-        }
-
-        userService.createWithGoogle(info);
-        return GeneralResponse.getResponse(HttpStatus.CREATED, "User registered successfully using Google");
-    }
-*
-*
-* */
 }

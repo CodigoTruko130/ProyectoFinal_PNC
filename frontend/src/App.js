@@ -6,7 +6,6 @@ import Invitation from './pages/admin-view/Invitation';
 import Members from './pages/admin-view/Members';
 import Search from './pages/admin-view/Search';
 import Family from './pages/admin-view/Family';
-import Main from './pages/Main';
 import GuardView from './pages/GuardView/GuardMain';
 import ScanQR from './pages/GuardView/ScanQR';
 import RegisterVisit from './pages/GuardView/RegisterVisit';

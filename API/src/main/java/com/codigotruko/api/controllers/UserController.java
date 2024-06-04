@@ -92,19 +92,6 @@ public class UserController {
         return GeneralResponse.getResponse("User Deleted");
     }
 
-    @PatchMapping("/change-password")
-    public ResponseEntity<?> changePassword(@AuthenticationPrincipal User user, @RequestBody UserUpdatePasswordRequestDTO request) {
-        if (!userService.checkPassword(user, request.getOldPassword())) {
-            return GeneralResponse.getResponse(HttpStatus.CONFLICT, "Current password is incorrect");
-        }
-
-        try {
-            userService.updatePassword(user.getEmail(), request.getNewPassword());
-            return GeneralResponse.getResponse(HttpStatus.OK, "Password changed successfully");
-        } catch (Exception e) {
-            return GeneralResponse.getResponse(HttpStatus.EXPECTATION_FAILED, "Could not update password");
-        }
-    }
 
 
 
