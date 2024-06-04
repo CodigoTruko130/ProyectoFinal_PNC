@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bgColor: #003C43;
+    --bgColor2: #0DC595;
+    --textColor: #0B666A;
+}
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+p{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+@media(max-width:600px){
+    .main-container-edit{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .profile-edit-img{
+        background-color: transparent;
+        width: 50%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .text{
+        background-color: transparent;
+        color: black;
+    }
+
+    .edit{
+        background-color: #0B666A;
+        border-color: transparent;
+        color: white;
+        width: 80%;
+        padding: 3% 0;
+        border-radius: 3rem;
+        margin: 2% 0;
+        padding-left: 2%;
+    }
+
+    .edit::placeholder{
+        color: white;   
+    }
+
+    .update{
+        background-color: #77B0AA;
+        border-color: transparent;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+        margin: 5% 0;
+        padding: 1% 5%;
+    }
+
+    .leave{
+        background-color: #C30000;
+        border-color: transparent;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+        font-weight: bold;
+        padding: 1% 5%;
+        margin: 5% 0
+    }
+}

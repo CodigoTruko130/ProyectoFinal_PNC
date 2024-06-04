@@ -2,6 +2,7 @@
 
 :root{
     --bgColor: #003C43;
+    --bgColor2: #0DC595;
     --textColor: #0B666A;
 }
 
@@ -16,28 +17,24 @@ p{
 }
 
 @media(max-width:600px){
-    .main-container-nav{
-        height: 100%; 
+    .main-container-fg{
+        background-color: white;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: flex-start;
+        border-bottom: black 1px solid;
     }
 
-    .image-container-nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5%;
-    }
-
-    .profile-nav{
-        width: 15%;
-        margin: 5% 2% 0 0;
+    .hp-img{
         background-color: transparent;
+        width: 15%;
     }
 
-    .notification{
-        width: 10%;
-        margin: 5% 0 0 2%;
+    .hp-title{
+        background-color: transparent;
+        color: black;
+        font-weight: bold;
+        font-size: larger;
+        margin-left: 5%;
     }
 }

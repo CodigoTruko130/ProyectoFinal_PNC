@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bgColor: #003C43;
+    --bgColor2: #0DC595;
+    --textColor: #0B666A;
+}
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+p{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:600px) {
+    .main-container-invitation{
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .main-title-i{
+        background-color: transparent;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 5%;
+    }
+
+    .search-input{
+        width: 85%;
+        border-color: transparent;
+        background-color: transparent;
+        margin-top: 5%;
+        border-bottom: 1px solid black;
+        font-size: large;
+    }
+
+    .search-input::placeholder{
+        color: black;
+    }
+
+    .overview-container{
+        display: flex;
+        width: 80%;
+        margin-top: 5%;
+        flex-direction: column;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .overview-item{
+        border-color: transparent;
+        margin: 5% 0;
+    }
+
+    .invitation-button{
+        margin-top: 5%;
+        border-color: transparent;
+        background-color: var(--textColor);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 60%;
+        padding: 2% 0;
+        border-radius: 2rem;
+    }
+}

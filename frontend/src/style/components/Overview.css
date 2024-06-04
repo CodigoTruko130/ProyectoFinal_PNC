@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bgColor: #003C43;
+    --bgColor2: #0DC595;
+    --textColor: #0B666A;
+}
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+p{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:600px) {
+    .main-container-overview{
+        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .profile-overview-img{
+        background-color: transparent;
+        width: 25%;
+    }
+
+    .names{
+        background-color: transparent;
+        margin-left: 5%;
+    }
+
+    .name{
+        background-color: transparent;
+        color: black;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .email{
+        background-color: transparent;
+        color: black;
+
+    }
+}
