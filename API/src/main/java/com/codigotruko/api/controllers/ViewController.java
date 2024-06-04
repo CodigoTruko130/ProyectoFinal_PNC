@@ -1,6 +1,6 @@
 package com.codigotruko.api.controllers;
 
-import com.codigotruko.api.domain.dtos.ProfileResponseDTO;
+import com.codigotruko.api.domain.dtos.user.UserProfileResponseDTO;
 import com.codigotruko.api.domain.entities.User;
 import com.codigotruko.api.services.UserService;
 import lombok.extern.slf4j.Slf4j;
