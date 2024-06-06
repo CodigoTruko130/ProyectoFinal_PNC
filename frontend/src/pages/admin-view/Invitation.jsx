@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import "../../style/Invitation.css"
+import "../../style/admin-view/Invitation.css"
 import Overview from '../../components/Overview'
 
 function Invitation() {
@@ -26,4 +26,4 @@ function Invitation() {
   )
 }
 
-export default Invitation
+export default Invitation;

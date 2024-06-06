@@ -8,7 +8,7 @@ function RegisterVisit() {
     const textareaRef = useRef(null);
 
     const navToMainGuardView = () => {
-        navigate('/');
+        navigate('/GuardView');
     };
 
     useEffect(() => {

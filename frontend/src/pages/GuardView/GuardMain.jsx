@@ -2,7 +2,7 @@ import React from "react"
 import { useNavigate } from 'react-router-dom';
 import '../../style/GuardView/GuardMain.css'
 
-function QR_Page () {
+function GuardMain() {
 
     const navigate = useNavigate();
 
@@ -12,7 +12,7 @@ function QR_Page () {
 
     const navToRegVisitView = () => {
         navigate('/RegisterVisit');
-    };
+    };  
 
     const navToListOfVisits = () => {
         navigate('/ListOfVisits');
@@ -24,21 +24,21 @@ function QR_Page () {
                 
                 <div className="top-bar-container">
                     <button className="notification-button">
-                        <img src="./GuardView/noNotification.png" className="notification-img" alt="Icono de Notificaciones" />
+                        <img src="./noNotification.png" className="notification-img" alt="Icono de Notificaciones" />
                     </button>
 
                     <div className="tittle-container">
-                        <img src="./GuardView/house.png" className="house-img" alt="Icono de Casa"/>
+                        <img src="./house.png" className="house-img" alt="Icono de Casa"/>
                         <p className="tittle-text">HLVS</p>
                     </div>
 
                     <button className="profile-button">
-                        <img src="./GuardView/profilePhoto.png" className="profile-img" alt="Foto de Perfil" />
+                        <img src="./profilePhoto.png" className="profile-img" alt="Foto de Perfil" />
                     </button>
                 </div>
 
                 <div className="qr-container">
-                    <img src="qr-code-example.png" className="qr-img" alt="QR Code Logo" />
+                    <img src="/qr.png" className="qr-img" alt="QR Code Logo" />
                 </div>
 
                 <div className="buttons-container">
@@ -52,10 +52,10 @@ function QR_Page () {
 
                     <div className="utils-container">
                         <button className="utils-button">
-                            <img src="./GuardView/pluma.png" className="utils-img" alt="Foto de Perfil" />
+                            <img src="./pluma.png" className="utils-img" alt="Foto de Perfil" />
                         </button>
                         <button className="utils-button">
-                            <img onClick={ navToListOfVisits } src="./GuardView/registerVisit.png" className="utils-img" alt="Foto de Perfil" />
+                            <img onClick={ navToListOfVisits } src="./registerVisit.png" className="utils-img" alt="Foto de Perfil" />
                         </button>
                     </div>
                 </div>
@@ -65,4 +65,4 @@ function QR_Page () {
     )
 }
 
-export default QR_Page
+export default GuardMain;

@@ -1,6 +1,6 @@
 import React from 'react'
 import FamilyGroup from '../../components/FamilyGroup';
-import "../../style/Family.css"
+import "../../style/admin-view/Family.css"
 
 function Family() {
 
@@ -25,4 +25,4 @@ function Family() {
   )
 }
 
-export default Family
+export default Family;

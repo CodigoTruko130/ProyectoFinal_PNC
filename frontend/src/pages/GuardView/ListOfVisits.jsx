@@ -5,7 +5,7 @@ function ListOfVisits() {
     const navigate = useNavigate();
 
     const navToMainGuardView = () => {
-        navigate('/');
+        navigate('/GuardView');
     };
 
     return (

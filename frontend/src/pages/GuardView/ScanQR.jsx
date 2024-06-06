@@ -10,7 +10,7 @@ function ScanQR() {
   const [scanning, setScanning] = useState(false);
 
   const navToMainGuardView = () => {
-    navigate('/');
+    navigate('/GuardView');
   };
 
   useEffect(() => {

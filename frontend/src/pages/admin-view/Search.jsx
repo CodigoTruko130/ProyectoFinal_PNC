@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import "../../style/Invitation.css"
+import "../../style/admin-view/Invitation.css"
 import Overview from '../../components/Overview'
 
 function Search() {
@@ -26,4 +26,4 @@ function Search() {
   )
 }
 
-export default Search
+export default Search;

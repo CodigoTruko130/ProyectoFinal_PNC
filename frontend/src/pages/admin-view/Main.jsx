@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
-import "../../style/Main.css"
+import "../../style/admin-view/Main.css"
 
 function Main() {
   return (
@@ -20,4 +20,4 @@ function Main() {
   )
 }
 
-export default Main
+export default Main;

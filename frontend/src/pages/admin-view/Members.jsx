@@ -1,6 +1,6 @@
 import React from 'react'
 import Overview from '../../components/Overview'
-import "../../style/Members.css"
+import "../../style/admin-view/Members.css"
 
 function Members() {
     const numberOfMembers = 5; 
@@ -23,4 +23,4 @@ return (
 )
 }
 
-export default Members
+export default Members;
