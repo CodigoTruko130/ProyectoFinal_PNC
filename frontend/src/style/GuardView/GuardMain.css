@@ -101,7 +101,7 @@
         background-color: #FFFFFF;
         width: 45vw;
         height: 8vh;
-        border-radius: 2rem;
+        border-radius: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -113,6 +113,8 @@
         width: 100%;
         height: 100%;
         border-radius: 2rem;
+        border: none;
+        outline: none;
     }
     
     .main-button-text {
@@ -140,5 +142,141 @@
         background: none;
         height: 70%;
         width: 70%;
+    }
+}
+
+@media (min-width : 1025px) {
+    
+    .main-container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /*********** TOP BAR ***********/
+    .top-bar-container {
+        width: 100%;
+        height: 16%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 25%;
+    }
+    
+    .notification-button {
+        height: 5vh;
+        width: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+    }
+    
+    .notification-img {
+        width: 5vw;
+    }
+    
+    .tittle-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tittle-text {
+        display: flex;
+        align-self: flex-end;
+        font-size: 450%;
+    }
+    
+    .house-img {
+        width: 8vw;
+    }
+
+    .profile-button {
+        border-radius: 100%;
+        border: none;
+    }
+
+    .profile-img {
+        width: 7vw;
+    }
+
+    /*********** MAIN CONTENT ***********/
+    .qr-container {
+        background-color: #FFFFFF;
+        height: 45%;
+        width: 15%;
+        margin: 3rem 0 2rem 0;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .qr-img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 1rem;
+    }
+    
+    .buttons-container {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    /* DISEÑO GENERICO PARA BOTON */
+    .button-container {
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 110%;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+    
+    .scan-page-button {
+        background-color: #FFFFFF;
+        border-color: #FFFFFF;
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+    }
+    
+    .main-button-text {
+        color: black;
+        background: none;
+        font-size: 300%;
+    }
+
+    .utils-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .utils-button {
+        height: 12vh;
+        width: 12vh;
+        background-color: white;
+        border-radius: 100%;
+    }
+
+    .utils-img {
+        background: none;
+        height: 65%;
+        width: 65%;
     }
 }
