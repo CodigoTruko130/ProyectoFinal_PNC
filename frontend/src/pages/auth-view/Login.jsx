@@ -43,7 +43,7 @@ function Login() {
 
   function handleNavigate() {
     if (selectedOption === "admin") {
-      navigate("/GuardView/");
+      navigate("/Main");
     }
     if (selectedOption === "owner") {
     }
