@@ -25,6 +25,7 @@
     .back-container {
         width: 100%;
         height: 10%;
+        background: #003C43;
         margin-bottom: 2rem;
     }
 
@@ -46,12 +47,101 @@
         color: #FFFFFF;
         font-size: 3rem;
         font-weight: bold;
+        margin: 0 0 6rem 0;
     }
 
     .camera-container {
         background-color: #FFFFFF;
         height: 45vh;
         width: 65vw;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .camera-view {
+        background-color: #FFFFFF;
+        width: 90%;
+        height: 90%;
+    }
+
+    .scan-button-container {
+        background-color: #34DD5A;
+        width: 40vw;
+        height: 10vh;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .scan-qr-button {
+        background-color: #34DD5A;
+        border-color: #34DD5A;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .scan-img {
+        height: 75%;
+        width: 25%;
+        background: none;
+    }
+
+    .button-text {
+        background-color: #34DD5A;
+        color: white;
+        font-size: 2rem;
+    }
+
+}
+
+@media (min-width : 1025px) {
+
+    .main-scan-container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-container {
+        width: 100%;
+        height: 10%;
+    }
+
+    .back-button {
+        width: 5%;
+        height: 100%;
+        margin: 2rem 0 0 1.5rem;
+        border: none;
+        outline: none;
+    }
+
+    .back-img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .main-title {
+        background-color: #003C43;
+        color: #FFFFFF;
+        font-size: 300%;
+        font-weight: bold;
+        margin: 0 0 6rem 0;
+    }
+
+    .camera-container {
+        background-color: #FFFFFF;
+        height: 50vh;
+        width: 30vw;
         border-radius: 1rem;
         display: flex;
         justify-content: center;

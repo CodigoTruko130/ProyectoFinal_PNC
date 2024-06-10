@@ -43,13 +43,15 @@ function Login() {
 
   function handleNavigate() {
     if (selectedOption === "admin") {
-      navigate("/GuardView/");
+      navigate("/Main");
     }
     if (selectedOption === "owner") {
+      navigate("/HouseOwnerView");
     }
     if (selectedOption === "member") {
     }
     if (selectedOption === "user") {
+      navigate("/UserView");
     }
     if (selectedOption === "guard") {
       navigate("/GuardView/");
