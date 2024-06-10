@@ -64,11 +64,16 @@ p{
     }
 
     /* ESTO SE BORRA LUEGO */
+    .dropdown-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .dropdown {
         background-color: white;
         margin-top: 10%;
         border-radius: 0.25rem;
-        padding: 10%;
+        padding: 5%;
     }
 
     .dropdown option {
@@ -96,6 +101,13 @@ p{
         font-size: medium;
         font-weight: 700;
         padding-left: 5%;
+    }
+
+    .column-login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 }
@@ -173,6 +185,116 @@ p{
 
     .google{
         background-color: transparent;
+    }
+
+    .main-text{
+        background-color: transparent;
+        color: var(--textColor);
+        font-size: medium;
+        font-weight: 700;
+        padding-left: 5%;
+    }
+
+}
+
+@media(min-width: 900px) {
+    .main-container{
+        height: 100vh; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .column-login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .column-login-op{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        height: 100vh;
+    }
+
+    .subtitle{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 0;
+        padding: 0;
+        margin-top: 3%;
+    }
+
+    .main-title{
+        font-size: 6rem;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+    }
+
+    .image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .house{
+        width: 50%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .button-container{
+        width: 40vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    button{
+        background-color: #FFFFFF;
+    }
+
+    /* ESTO SE BORRA LUEGO */
+    .dropdown {
+        background-color: white;
+        margin-top: 10%;
+        border-radius: 0.25rem;
+        padding: 10%;
+        border-color: black solid 1px;
+    }
+
+    .dropdown option {
+        background-color: white;
+    }
+
+    .dropdown-container{
+        background-color: transparent;
+    }
+
+    .login-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-color: black solid 1px;
+        margin-top: 5%;
+        padding: 2% 5%;
+        border-radius: 5vh;
+        width: 80%;
+
+    }
+
+    .google{
+        background-color: transparent;
+
     }
 
     .main-text{
