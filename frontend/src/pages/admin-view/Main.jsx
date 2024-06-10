@@ -3,10 +3,30 @@ import Navbar from "../../components/Navbar";
 import Menu from "../../components/Menu";
 import Profile from "../../components/Profile";
 import EditProfile from "../../components/EditProfile";
+import { useNavigate } from 'react-router-dom';
 import "../../style/admin-view/Main.css";
 
 
 function Main() {
+
+  const navigate = useNavigate();
+
+  const navToScanQR = () => {
+      navigate('/ScanQRA');
+  };
+
+  const navToFamily = () => {
+    navigate('/Family');
+  };
+
+  const navToInvitation = () => {
+    navigate('/Invitation');
+  };
+
+  const navToList = () => {
+    navigate('/ListOfVisitsA');
+  };
+
   
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [overlayComponent, setOverlayComponent] = useState(null);
@@ -45,13 +65,13 @@ function Main() {
             <Navbar />
           </div>
           <img src="qr.png" alt="" className="qr" />
-          <button className="main-btn"><a href="scanqra" className="ref-main">ESCANEAR QR</a></button>
-          <button className="main-btn"><a href="family" className="ref-main">ADMINISTRAR GRUPOS</a></button>
-          <button className="main-btn"><a href="invitation" className="ref-main">HACER INVITACIÓN</a></button>
+          <button className="main-btn" onClick={navToScanQR}>ESCANEAR QR</button>
+          <button className="main-btn" onClick={navToFamily}>ADMINISTRAR GRUPOS</button>
+          <button className="main-btn" onClick={navToInvitation}>HACER INVITACIÓN</button>
 
           <div className="buttons">
             <button className='action-btn'><img src="pluma.png" alt="" className='btn-image'/></button>
-            <button className='action-btn'><img src="list.png" alt="" className='btn-image'/></button>
+            <button className='action-btn' onClick={navToList}><img src="list.png" alt="" className='btn-image'/></button>
         </div>
         </div>
       </div>
