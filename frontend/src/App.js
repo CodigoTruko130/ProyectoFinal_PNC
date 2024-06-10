@@ -33,7 +33,11 @@ function App() {
           <Route path='/GenerateQR' element={<GenerateQR />}></Route>
           <Route path='/Profile' element={<Profile />}></Route>
           <Route path='/EditProfile' element={<EditProfile />}></Route>
+
+          {/* LAS DE ABAJO DESPUES SE QUITAN */}
+          
           <Route path='/ScanQRA' element={<ScanQR />}></Route>
+
         </Routes>
       </Router>
     </>
