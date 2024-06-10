@@ -16,6 +16,80 @@ p{
     padding: 0;
 }
 
+@media (min-width:900px) {
+    .main-container-members{
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .main-title-m{
+        background-color: transparent;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 2%;
+    }
+
+    .search-input{
+        width: 85%;
+        border-color: transparent;
+        background-color: transparent;
+        margin-top: 5%;
+        border-bottom: 1px solid black;
+        font-size: large;
+    }
+
+    .search-input::placeholder{
+        color: black;
+    }
+
+    .overview-container{
+        display: flex;
+        width: 80%;
+        margin-top: 2%;
+        flex-direction: column;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .overview-item{
+        border-color: transparent;
+        margin: 5% 0;
+    }
+
+    .owner-label{
+        top: 0;
+        left: 0;
+        background-color: white;
+        color: black;
+        padding: 5px;
+        font-weight: bold;
+        background-color: transparent;
+        font-size: 14px;
+    }
+
+    .add-btn{
+        border-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: larger;
+        font-weight: bold;
+        margin-top: 2%;
+    }
+
+    .add-icon{
+        background-color: transparent;
+        width: 5%;
+        margin-right: 1%;
+    }
+}
+
 @media (max-width:600px) {
     .main-container-invitation{
         height: 100vh;

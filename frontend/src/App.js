@@ -12,6 +12,7 @@ import ListOfVisits from './pages/GuardView/ListOfVisits';
 import GenerateQR from './pages/QR/GenerateQR';
 import Profile from './components/Profile';
 import EditProfile from './components/EditProfile';
+import ScanQRA from './pages/admin-view/ScanQRAdmin';
 import './App.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 
           {/* LAS DE ABAJO DESPUES SE QUITAN */}
           
+          <Route path='/ScanQRA' element={<ScanQR />}></Route>
 
         </Routes>
       </Router>

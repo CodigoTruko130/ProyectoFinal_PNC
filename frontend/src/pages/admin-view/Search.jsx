@@ -11,6 +11,7 @@ function Search() {
   return (
     <>
       <div className="main-container-invitation">
+      <button className='btn-overlay-i'><a href="main" className='ref-i'><img src="icons/back.png" alt=""className='img-btn-overlay-i'/></a></button>
         <p className='main-title-i'>BUSCAR MIEMBROS</p>
         <input type="text" value={searchValue} onChange={handleSearchEvent} placeholder="Nombre de usuario" className="search-input"/>
         <div className="overview-container" style={{ overflow: 'auto', maxHeight: '400px', alignItems: 'flex-start' }}>
