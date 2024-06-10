@@ -82,12 +82,6 @@ function ScanQR() {
         <canvas ref={canvasRef} className="camera-canvas" style={{ display: 'none' }} />
       </div>
 
-      <div className="scan-button-container">
-        <button className="scan-qr-button" onClick={handleScanButtonClick}>
-          <img src="./GuardView/scan.png" className="scan-img" alt="Boton para escaner QR" />
-          <p className="button-text">Scan QR</p>
-        </button>
-      </div>
     </div>
   );
 }

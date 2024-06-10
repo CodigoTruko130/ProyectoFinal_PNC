@@ -1,13 +1,7 @@
-import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import Navbar from "../../components/Navbar";
-import MenuHover from "../../components/MenuHover";
-import Profile from "../../components/Profile";
-import EditProfile from "../../components/EditProfile";
 import '../../style/GuardView/GuardMain.css'
 
 function GuardMain() {
-
     const navigate = useNavigate();
 
     const navToScanQR = () => {
@@ -16,23 +10,10 @@ function GuardMain() {
 
     const navToRegVisitView = () => {
         navigate('/RegisterVisit');
-    };  
+    };
 
     const navToListOfVisits = () => {
         navigate('/ListOfVisits');
-    }
-
-    const [isOverlayVisible, setIsOverlayVisible] = useState(false);
-    const [overlayComponent, setOverlayComponent] = useState(null);
-  
-    const showOverlay = (component) => {
-        setOverlayComponent(component);
-        setIsOverlayVisible(true);
-    };
-  
-    const hideOverlay = () => {
-        setIsOverlayVisible(false);
-        setOverlayComponent(null);
     };
 
     return (
@@ -48,7 +29,6 @@ function GuardMain() {
                         </div>
                     )}
                 </div>
-                
 
                 <div className="qr-container">
                     <img src="/qr.png" className="qr-img" alt="QR Code Logo" />
@@ -56,11 +36,15 @@ function GuardMain() {
 
                 <div className="buttons-container">
                     <div className="button-container">
-                        <button onClick={ navToScanQR } className="scan-page-button"><p className="main-button-text">Escanear QR</p></button>
+                        <button onClick={ navToScanQR } className="scan-page-button">
+                            <p className="main-button-text">Escanear QR</p>
+                        </button>
                     </div>
 
                     <div className="button-container">
-                        <button onClick={ navToRegVisitView } className="scan-page-button"><p className="main-button-text">Registrar Visita</p></button>
+                        <button onClick={ navToRegVisitView } className="scan-page-button">
+                            <p className="main-button-text">Registrar Visita</p>
+                        </button>
                     </div>
 
                     <div className="utils-container">
@@ -72,10 +56,9 @@ function GuardMain() {
                         </button>
                     </div>
                 </div>
-
             </div>
         </>
-    )
+    );
 }
 
 export default GuardMain;

@@ -165,20 +165,6 @@ p {
     width: 25px;
   }
 }
-        justify-content: flex-start;
-        margin: 3% 0;
-    }
-
-    .menu-text{
-        background-color: transparent;
-        color: black;
-    }
-
-    .menu-icon{
-        background-color: transparent;
-        width: 25px;
-    }
-}
 
 @media(min-width:600px) and (max-width:1024px){
     .main-container-menu{
