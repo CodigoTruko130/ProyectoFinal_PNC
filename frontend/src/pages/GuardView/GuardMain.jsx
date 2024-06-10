@@ -1,5 +1,9 @@
-import React from "react"
+import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
+import Navbar from "../../components/Navbar";
+import MenuHover from "../../components/MenuHover";
+import Profile from "../../components/Profile";
+import EditProfile from "../../components/EditProfile";
 import '../../style/GuardView/GuardMain.css'
 
 function GuardMain() {
@@ -18,24 +22,33 @@ function GuardMain() {
         navigate('/ListOfVisits');
     }
 
+    const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+    const [overlayComponent, setOverlayComponent] = useState(null);
+  
+    const showOverlay = (component) => {
+        setOverlayComponent(component);
+        setIsOverlayVisible(true);
+    };
+  
+    const hideOverlay = () => {
+        setIsOverlayVisible(false);
+        setOverlayComponent(null);
+    };
+
     return (
         <>
             <div className="main-container">
                 
-                <div className="top-bar-container">
-                    <button className="notification-button">
-                        <img src="./noNotification.png" className="notification-img" alt="Icono de Notificaciones" />
-                    </button>
-
-                    <div className="tittle-container">
-                        <img src="./house.png" className="house-img" alt="Icono de Casa"/>
-                        <p className="tittle-text">HLVS</p>
-                    </div>
-
-                    <button className="profile-button">
-                        <img src="./profilePhoto.png" className="profile-img" alt="Foto de Perfil" />
-                    </button>
+                <div className="profile-nav-option">
+                    <MenuHover showOverlay={showOverlay}/>
+                    {isOverlayVisible &&(
+                        <div className="overlay">
+                            {overlayComponent === 'Profile' && <Profile hideOverlay={hideOverlay} />}
+                            {overlayComponent === 'EditProfile' && <EditProfile hideOverlay={hideOverlay} />}
+                        </div>
+                    )}
                 </div>
+                
 
                 <div className="qr-container">
                     <img src="/qr.png" className="qr-img" alt="QR Code Logo" />
