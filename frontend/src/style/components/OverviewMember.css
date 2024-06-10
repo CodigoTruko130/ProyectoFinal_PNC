@@ -16,58 +16,67 @@ p{
     padding: 0;
 }
 
-@media(min-width:900px){
-    .main-container-fg{
+@media (min-width:900px){
+    .main-container-overview-i{
         background-color: white;
         display: flex;
-        align-items: center;
         justify-content: flex-start;
-        border-bottom: black 1px solid;
-        width: 70vw;
+        align-items: center;
         height: 15vh;
+        margin: 0;
     }
 
-    .hp-img{
+    .profile-overview-img-member{
         background-color: transparent;
         width: 10%;
     }
 
-    .hp-title{
+    .names{
         background-color: transparent;
-        color: black;
-        font-weight: bold;
-        font-size: xx-large;
         margin-left: 5%;
     }
 
-    .ref-fg{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+    .name{
         background-color: transparent;
-        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .user{
+        background-color: transparent;
+        color: black;
     }
 }
 
-@media(max-width:600px){
-    .main-container-fg{
+@media (max-width:600px) {
+    .main-container-overview{
         background-color: white;
         display: flex;
-        align-items: center;
         justify-content: flex-start;
-        border-bottom: black 1px solid;
+        align-items: center;
     }
 
-    .hp-img{
+    .profile-overview-img{
         background-color: transparent;
-        width: 15%;
+        width: 25%;
     }
 
-    .hp-title{
+    .names{
+        background-color: transparent;
+        margin-left: 5%;
+    }
+
+    .name{
         background-color: transparent;
         color: black;
         font-weight: bold;
-        font-size: larger;
-        margin-left: 5%;
+        font-size: 1rem;
+    }
+
+    .user{
+        background-color: transparent;
+        color: black;
+        font-size: small;
     }
 }
