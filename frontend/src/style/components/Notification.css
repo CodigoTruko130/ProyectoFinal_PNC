@@ -16,6 +16,40 @@ p{
     padding: 0;
 }
 
+@media(min-width:900px){
+    .main-container-noti{
+        height: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    
+    .profile-nav-2{
+        width: 15%;
+        background-color: transparent;
+    }
+
+    .info-noti{
+        background-color: transparent;
+        margin-left: 5%;
+    }
+    
+    .subtitle-noti{
+        font-weight: bold;
+        color: black;
+        background-color: transparent;
+    }
+
+    .text-noti{
+        background-color: transparent;
+        color: black;
+        font-size: small;
+    }
+
+
+}
+
 @media(max-width:600px){
     .main-container-noti{
         height: 100%; 

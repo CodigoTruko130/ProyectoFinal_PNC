@@ -79,11 +79,30 @@ p{
         height: 100vh;
         width: 100vw;
     }
+
+    .ref-main{
+        background-color: transparent;
+        text-decoration: none;
+        color: black;
+      }
 }
 
 @media(min-width:900px){
     .navbar-container-mobile{
         display: none;
+    }
+
+    .notification-btn{
+        position: absolute;
+        background-color: transparent;
+        border-color: transparent;
+        top: 1%;
+        left: 1%;
+    }
+
+    .notification-img{
+        background-color: transparent;
+        width: 5vw;
     }
 
     .main-container-main{
@@ -172,5 +191,16 @@ p{
         border-color: black solid 2px;
         top: 2%;
         right: 2%;
+    }
+
+    .display-menu{
+        width: 5vw;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .display-menu-img{
+        width: 5vw;
+        background-color: transparent;
     }
 }

@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 import Navbar from "../../components/Navbar";
-import MenuHover from "../../components/MenuHover";
+import Menu from "../../components/Menu";
 import Profile from "../../components/Profile";
 import EditProfile from "../../components/EditProfile";
 import "../../style/admin-view/Main.css";
 
+
 function Main() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [overlayComponent, setOverlayComponent] = useState(null);
-
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   const showOverlay = (component) => {
     setOverlayComponent(component);
@@ -19,11 +20,19 @@ function Main() {
     setIsOverlayVisible(false);
     setOverlayComponent(null);
   };
+  
+  const handleMenuToggle = () => {
+    setIsMenuVisible(!isMenuVisible);
+  };
+
+
   return (
     <>
       <div className="main-container-main">
-        <div className="profile-nav-option">
-          <MenuHover showOverlay={showOverlay}/>
+        <button className="notification-btn"><img src="logos/notification.png" alt="" className="notification-img"/></button>
+        <div className="profile-nav-option" >
+          <button className="display-menu" onClick={handleMenuToggle}><img src="profile.png" alt="" className="display-menu-img"/></button>
+          <Menu isMenuVisible={isMenuVisible} setIsMenuVisible={setIsMenuVisible} showOverlay={showOverlay}/>
           {isOverlayVisible &&(
             <div className="overlay">
             {overlayComponent === 'Profile' && <Profile hideOverlay={hideOverlay} />}

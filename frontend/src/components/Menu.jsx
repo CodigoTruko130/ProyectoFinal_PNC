@@ -1,11 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "../style/components/Menu.css"
-import  SignIn from '../components/GoogleButton';
 
-function Menu() {
+function Menu({ isMenuVisible, setIsMenuVisible, showOverlay }) {
+
+  const handleMenuClose = () => {
+    setIsMenuVisible(false);
+  };
+
+  const handleProfileClick = () => {
+    showOverlay('Profile');
+    setIsMenuVisible(false); // Cierra el menú cuando se muestra el overlay
+};
+
+const handleEditProfileClick = () => {
+  showOverlay('EditProfile');
+  setIsMenuVisible(false); // Cierra el menú cuando se muestra el overlay
+};
+
   return (
     <>
-        <div className="main-container-menu">
+    {isMenuVisible && 
+    (<div className="main-container-menu" onClick={handleMenuClose}>
             <div className="user">
             <img src="profile.png" alt="" className='profile-menu'/>
             <div className="user-info">
@@ -14,21 +29,20 @@ function Menu() {
             </div>
             </div>
             <div className="menu-options">
-                <div className="menu-option">
+                <button className='menu-option' onClick={handleProfileClick} >
                     <img src="logos/profile.png" alt="" className='menu-icon'/>
                     <p className='menu-text'>Mi perfil</p>
-                </div>
-                <div className="menu-option">
+                </button >
+                <button className='menu-option' onClick={handleEditProfileClick}>
                     <img src="logos/edit.png" alt="" className='menu-icon'/>
                     <p className='menu-text'>Editar perfil</p>
-                </div>
-                <div className="menu-option">
+                </button>
+                <button className="menu-option">
                     <img src="logos/logout.png" alt="" className='menu-icon'/>
                     <p className='menu-text'>Salir</p>
-                </div>
-                <SignIn/>
+                </button>
             </div>
-        </div>
+        </div>)}
     </>
   )
 }
