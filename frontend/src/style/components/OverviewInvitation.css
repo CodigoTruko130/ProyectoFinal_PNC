@@ -50,11 +50,13 @@ p{
 }
 
 @media (max-width:600px) {
-    .main-container-overview{
+    .main-container-overview-i{
         background-color: white;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        height: 15vh;
+        margin: 0;
     }
 
     .profile-overview-img{

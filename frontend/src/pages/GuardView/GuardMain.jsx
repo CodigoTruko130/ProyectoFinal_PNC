@@ -24,7 +24,7 @@ function GuardMain() {
                 
                 <div className="top-bar-container">
                     <button className="notification-button">
-                        <img src="./noNotification.png" className="notification-img" alt="Icono de Notificaciones" />
+                        <img src="logos/notification.png" className="notification-img" alt="Icono de Notificaciones" />
                     </button>
 
                     <div className="tittle-container">
@@ -35,6 +35,8 @@ function GuardMain() {
                     <button className="profile-button">
                         <img src="./profilePhoto.png" className="profile-img" alt="Foto de Perfil" />
                     </button>
+
+
                 </div>
 
                 <div className="qr-container">

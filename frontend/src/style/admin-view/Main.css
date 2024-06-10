@@ -85,6 +85,14 @@ p{
         text-decoration: none;
         color: black;
       }
+
+      .notification-img{
+        display: none
+      }
+
+      .notification-btn{
+        display: none;
+      }
 }
 
 @media(min-width:900px){
@@ -200,7 +208,7 @@ p{
     }
 
     .display-menu-img{
-        width: 5vw;
+        width: 7vw;
         background-color: transparent;
     }
 }
