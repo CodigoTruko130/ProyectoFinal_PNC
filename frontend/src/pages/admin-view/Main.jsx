@@ -37,8 +37,8 @@ function Main() {
             <Navbar />
           </div>
           <img src="qr.png" alt="" className="qr" />
-          <button className="main-btn">ESCANEAR QR</button>
-          <button className="main-btn"><a href="invitation" className="ref-main">ADMINISTRAR GRUPOS</a></button>
+          <button className="main-btn"><a href="scanqra" className="ref-main">ESCANEAR QR</a></button>
+          <button className="main-btn"><a href="family" className="ref-main">ADMINISTRAR GRUPOS</a></button>
           <button className="main-btn"><a href="invitation" className="ref-main">HACER INVITACIÓN</a></button>
 
           <div className="buttons">

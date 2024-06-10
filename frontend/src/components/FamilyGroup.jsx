@@ -5,7 +5,7 @@ function FamilyGroup() {
   return (
     <>
         <div className="main-container-fg">
-            <img src="/logos/house.png" alt="" className='hp-img'/> <p className='hp-title'>Caballero Guerrero</p>
+            <a href="members" className='ref-fg'><img src="/logos/house.png" alt="" className='hp-img'/> <p className='hp-title'>Caballero Guerrero</p></a>
         </div>
     </>
   )

@@ -12,6 +12,7 @@ import ListOfVisits from './pages/GuardView/ListOfVisits';
 import GenerateQR from './pages/QR/GenerateQR';
 import Profile from './components/Profile';
 import EditProfile from './components/EditProfile';
+import ScanQRA from './pages/admin-view/ScanQRAdmin';
 
 /* DESPUES SE BORRA */
 import UserView from './pages/user-view/Main';
@@ -36,9 +37,12 @@ function App() {
           <Route path='/GenerateQR' element={<GenerateQR />}></Route>
           <Route path='/Profile' element={<Profile />}></Route>
           <Route path='/EditProfile' element={<EditProfile />}></Route>
+          <Route path='/ScanQRA' element={<ScanQR />}></Route>
 
           {/* LAS DE ABAJO DESPUES SE QUITAN */}
           <Route path='/UserView' element={<UserView />}></Route>
+          
+          <Route path='/ScanQRA' element={<ScanQR />}></Route>
 
         </Routes>
       </Router>
