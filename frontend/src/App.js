@@ -13,6 +13,7 @@ import GenerateQR from './pages/QR/GenerateQR';
 import Profile from './components/Profile';
 import EditProfile from './components/EditProfile';
 import ScanQRA from './pages/admin-view/ScanQRAdmin';
+import MainUser from './pages/user/MainUser';
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path='/Profile' element={<Profile />}></Route>
           <Route path='/EditProfile' element={<EditProfile />}></Route>
           <Route path='/ScanQRA' element={<ScanQRA />}></Route>
+          <Route path='/User' element={<MainUser />}></Route>
         </Routes>
       </Router>
     </>
