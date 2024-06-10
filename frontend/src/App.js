@@ -12,6 +12,10 @@ import ListOfVisits from './pages/GuardView/ListOfVisits';
 import GenerateQR from './pages/QR/GenerateQR';
 import Profile from './components/Profile';
 import EditProfile from './components/EditProfile';
+
+/* DESPUES SE BORRA */
+import UserView from './pages/user-view/Main';
+
 import './App.css';
 
 function App() {
@@ -34,7 +38,7 @@ function App() {
           <Route path='/EditProfile' element={<EditProfile />}></Route>
 
           {/* LAS DE ABAJO DESPUES SE QUITAN */}
-          
+          <Route path='/UserView' element={<UserView />}></Route>
 
         </Routes>
       </Router>

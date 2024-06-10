@@ -6,7 +6,7 @@ import EditProfile from "../../components/EditProfile";
 import "../../style/admin-view/Main.css";
 
 function Main() {
-  
+
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [overlayComponent, setOverlayComponent] = useState(null);
 
@@ -19,7 +19,6 @@ function Main() {
     setIsOverlayVisible(false);
     setOverlayComponent(null);
   };
-
   return (
     <>
       <div className="main-container-main">
@@ -37,14 +36,8 @@ function Main() {
             <Navbar />
           </div>
           <img src="qr.png" alt="" className="qr" />
-          <button className="main-btn">ESCANEAR QR</button>
-          <button className="main-btn"><a href="invitation" className="ref-main">ADMINISTRAR GRUPOS</a></button>
           <button className="main-btn"><a href="invitation" className="ref-main">HACER INVITACIÓN</a></button>
-
-          <div className="buttons">
-            <button className='action-btn'><img src="pluma.png" alt="" className='btn-image'/></button>
-            <button className='action-btn'><img src="list.png" alt="" className='btn-image'/></button>
-        </div>
+          
         </div>
       </div>
     </>

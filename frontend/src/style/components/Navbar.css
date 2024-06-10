@@ -42,7 +42,34 @@ p{
     }
 }
 
-@media(min-width:900px){
+@media (min-width:600px) and (max-width:1024px){
+    .main-container-nav{
+        height: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-container-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .profile-nav{
+        width: 15%;
+        margin: 5% 2% 0 0;
+        background-color: transparent;
+    }
+
+    .notification{
+        width: 10%;
+        margin: 5% 0 0 2%;
+    }
+}
+
+@media(min-width:1025px){
     .main-container-nav{
         height: 100%; 
         display: flex;
