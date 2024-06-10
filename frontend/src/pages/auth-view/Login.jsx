@@ -60,7 +60,7 @@ function Login() {
 
   return (
     <>
-      <div className="main-container">
+      <div className="main-container-main">
         <div className="column-login">
           <p className="subtitle">Residencia</p>
           <p className="main-title">HLVS</p>
@@ -85,9 +85,7 @@ function Login() {
               <img src="google.png" alt="" className="google" />
               <p className="main-text">LOGIN WITH GOOGLE</p>
             </button>
-          </div>
-
-          {/* Menú desplegable justo debajo del botón de Google */}
+            {/* Menú desplegable justo debajo del botón de Google */}
           <div className="dropdown-container">
             <select
               value={selectedOption}
@@ -100,6 +98,7 @@ function Login() {
               <option value="user">User View</option>
               <option value="guard">Guard View</option>
             </select>
+          </div>
           </div>
         </div>
       </div>

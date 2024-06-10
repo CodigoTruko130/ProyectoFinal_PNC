@@ -15,7 +15,7 @@ p{
     padding: 0;
 }
 
-@media(max-width: 599px){
+@media(max-width: 600px){
     .main-container{
         height: 100%; 
         display: flex;
@@ -148,6 +148,7 @@ p{
     .button-container{
         width: 100vw;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -173,6 +174,7 @@ p{
         padding: 2% 5%;
         border-radius: 5vh;
         width: 80%;
+        background-color: white;
     }
 
     .google{
@@ -189,12 +191,11 @@ p{
 
 }
 
-@media(min-width: 1025px) {
-    .main-container{
+@media(min-width: 900px) {
+    .main-container-main{
         height: 100vh; 
         display: grid;
         grid-template-columns: 1fr 1fr;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -204,6 +205,8 @@ p{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100vh;
+        width: 100vw;
     }
 
     .column-login-op{
@@ -211,6 +214,8 @@ p{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100vh;
+        width: 100vw;
     }
 
     .subtitle{
@@ -239,10 +244,11 @@ p{
     }
 
     .button-container{
-        width: 40vw;
+        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         background-color: transparent;
     }
 
@@ -253,7 +259,6 @@ p{
     /* ESTO SE BORRA LUEGO */
     .dropdown {
         background-color: white;
-        margin-top: 10%;
         border-radius: 0.25rem;
         padding: 10%;
         border-color: black solid 1px;
@@ -264,7 +269,12 @@ p{
     }
 
     .dropdown-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: transparent;
+        width: 20vw;
+        margin-top: 5%;
     }
 
     .login-btn{
@@ -275,6 +285,7 @@ p{
         margin-top: 5%;
         padding: 2% 5%;
         border-radius: 5vh;
+        width: 40vw;
     }
 
     .google{
