@@ -165,3 +165,85 @@ p {
     width: 25px;
   }
 }
+        justify-content: flex-start;
+        margin: 3% 0;
+    }
+
+    .menu-text{
+        background-color: transparent;
+        color: black;
+    }
+
+    .menu-icon{
+        background-color: transparent;
+        width: 25px;
+    }
+}
+
+@media(min-width:600px) and (max-width:1024px){
+    .main-container-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: white;
+    }
+
+    .user{
+        display: flex;
+        background-color: white;
+    }
+
+    .user-info{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 5%;
+    }
+
+    .subtitle-menu{
+        font-weight: bold;
+        color: black;
+        background-color: transparent;
+    }
+
+    .text-menu{
+        background-color: transparent;
+        color: black;
+        font-size: x-small;
+    }
+
+    .profile-menu{
+        width: 15%;
+        background-color: transparent;
+    }
+
+    .menu-options{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 1%;
+    }
+
+    .menu-option{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 3% 0;
+    }
+
+    .menu-text{
+        background-color: transparent;
+        color: black;
+    }
+
+    .menu-icon{
+        background-color: transparent;
+        width: 25px;
+    }
+}

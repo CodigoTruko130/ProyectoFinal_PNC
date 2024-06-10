@@ -1,16 +1,14 @@
 import React, {useState} from "react";
 import Navbar from "../../components/Navbar";
-import Menu from "../../components/Menu";
+import MenuHover from "../../components/MenuHover";
 import Profile from "../../components/Profile";
 import EditProfile from "../../components/EditProfile";
 import "../../style/admin-view/Main.css";
 
-
 function Main() {
-  
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [overlayComponent, setOverlayComponent] = useState(null);
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
 
   const showOverlay = (component) => {
     setOverlayComponent(component);
@@ -21,18 +19,11 @@ function Main() {
     setIsOverlayVisible(false);
     setOverlayComponent(null);
   };
-  
-  const handleMenuToggle = () => {
-    setIsMenuVisible(!isMenuVisible);
-  };
-
   return (
     <>
       <div className="main-container-main">
-        <button className="notification-btn"><img src="logos/notification.png" alt="" className="notification-img"/></button>
-        <div className="profile-nav-option" >
-          <button className="display-menu" onClick={handleMenuToggle}><img src="profile.png" alt="" className="display-menu-img"/></button>
-          <Menu isMenuVisible={isMenuVisible} setIsMenuVisible={setIsMenuVisible} showOverlay={showOverlay}/>
+        <div className="profile-nav-option">
+          <MenuHover showOverlay={showOverlay}/>
           {isOverlayVisible &&(
             <div className="overlay">
             {overlayComponent === 'Profile' && <Profile hideOverlay={hideOverlay} />}
@@ -45,14 +36,10 @@ function Main() {
             <Navbar />
           </div>
           <img src="qr.png" alt="" className="qr" />
-          <button className="main-btn"><a href="scanqra" className="ref-main">ESCANEAR QR</a></button>
-          <button className="main-btn"><a href="family" className="ref-main">ADMINISTRAR GRUPOS</a></button>
+          <button className="main-btn">ESCANEAR QR</button>
+          <button className="main-btn"><a href="invitation" className="ref-main">ADMINISTRAR GRUPOS</a></button>
           <button className="main-btn"><a href="invitation" className="ref-main">HACER INVITACIÓN</a></button>
-
-          <div className="buttons">
-            <button className='action-btn'><img src="pluma.png" alt="" className='btn-image'/></button>
-            <button className='action-btn'><img src="list.png" alt="" className='btn-image'/></button>
-        </div>
+          
         </div>
       </div>
     </>
