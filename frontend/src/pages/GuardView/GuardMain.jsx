@@ -1,4 +1,8 @@
 import { useNavigate } from 'react-router-dom';
+import React, {useState} from "react";
+import Menu from "../../components/Menu";
+import Profile from "../../components/Profile";
+import EditProfile from "../../components/EditProfile";
 import '../../style/GuardView/GuardMain.css'
 
 function GuardMain() {
@@ -16,19 +20,39 @@ function GuardMain() {
         navigate('/ListOfVisits');
     };
 
+    const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+    const [overlayComponent, setOverlayComponent] = useState(null);
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
+  
+    const showOverlay = (component) => {
+      setOverlayComponent(component);
+      setIsOverlayVisible(true);
+    };
+  
+    const hideOverlay = () => {
+      setIsOverlayVisible(false);
+      setOverlayComponent(null);
+    };
+    
+    const handleMenuToggle = () => {
+      setIsMenuVisible(!isMenuVisible);
+    };
+
     return (
         <>
             <div className="main-container">
-    
-                <div className="profile-nav-option">
-                    <MenuHover showOverlay={showOverlay}/>
-                    {isOverlayVisible &&(
-                        <div className="overlay">
-                            {overlayComponent === 'Profile' && <Profile hideOverlay={hideOverlay} />}
-                            {overlayComponent === 'EditProfile' && <EditProfile hideOverlay={hideOverlay} />}
-                        </div>
-                    )}
-                </div>
+
+            <button className="notification-btn"><img src="/logos/notification.png" alt="" className="notification-img"/></button>
+        <div className="profile-nav-option" >
+          <button className="display-menu" onClick={handleMenuToggle}><img src="/profile.png" alt="" className="display-menu-img"/></button>
+          <Menu isMenuVisible={isMenuVisible} setIsMenuVisible={setIsMenuVisible} showOverlay={showOverlay}/>
+          {isOverlayVisible &&(
+            <div className="overlay">
+            {overlayComponent === 'Profile' && <Profile hideOverlay={hideOverlay} />}
+            {overlayComponent === 'EditProfile' && <EditProfile hideOverlay={hideOverlay} />}
+          </div>
+          )}
+        </div>
 
                 <div className="qr-container">
                     <img src="/qr.png" className="qr-img" alt="QR Code Logo" />

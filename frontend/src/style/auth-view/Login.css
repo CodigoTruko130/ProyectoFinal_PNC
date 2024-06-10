@@ -59,10 +59,6 @@ p{
         justify-content: center;
     }
 
-    button{
-        background-color: #FFFFFF;
-    }
-
     /* ESTO SE BORRA LUEGO */
     .dropdown-container{
         display: flex;
@@ -154,10 +150,6 @@ p{
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    button{
-        background-color: #FFFFFF;
     }
 
     /* ESTO SE BORRA LUEGO */

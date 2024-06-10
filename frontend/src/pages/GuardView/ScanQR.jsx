@@ -68,11 +68,6 @@ function ScanQR() {
     }
   };
 
-  const handleScanButtonClick = () => {
-    setScanning(true);
-    scanQRCode();
-  };
-
   return (
     <div className="main-scan-container">
       <div className="back-container">
