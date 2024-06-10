@@ -17,17 +17,18 @@ p{
 }
 
 @media (min-width:900px){
-    .main-container-overview{
+    .main-container-overview-i{
         background-color: white;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        height: 8vh;
+        height: 15vh;
+        margin: 0;
     }
 
     .profile-overview-img{
         background-color: transparent;
-        width: 25%;
+        width: 15%;
     }
 
     .names{

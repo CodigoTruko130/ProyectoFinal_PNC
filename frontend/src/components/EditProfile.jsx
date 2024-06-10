@@ -1,10 +1,17 @@
 import React from 'react'
 import "../style/components/EditProfile.css"
 
-function EditProfile() {
+  function EditProfile({ hideOverlay }) {
+    const handleOverlayClick = (e) => {
+      if (e.target === e.currentTarget) {
+        hideOverlay();
+      }
+    };
+    
   return (
     <>
-      <div className="main-container-edit">
+      <div className="main-container-edit" onClick={handleOverlayClick}>
+      <button onClick={hideOverlay} className='btn-overlay'><img src="icons/back.png" alt=""className='img-btn-overlay'/></button>
       <img src="profile.png" alt="" className='profile-edit-img'/>
       <p className='text'>¿Desdeas cambiar tus datos?</p>
       <input type="text" className="edit" placeholder='Nombre de usuario'/>

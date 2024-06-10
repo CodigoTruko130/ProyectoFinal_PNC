@@ -16,7 +16,104 @@ p{
     padding: 0;
 }
 
+@media (min-width:900px) {
+    .main-container-invitation{
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .main-title-i{
+        background-color: transparent;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 2%;
+    }
+
+    .ref-i{
+        background-color: transparent;
+    }
+
+    .search-input{
+        width: 85%;
+        border-color: transparent;
+        background-color: transparent;
+        margin-top: 2%;
+        border-bottom: 1px solid black;
+        font-size: large;
+    }
+
+    .search-input::placeholder{
+        color: black;
+    }
+
+    .overview-container{
+        display: flex;
+        width: 80%;
+        margin-top: 5%;
+        flex-direction: column;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .overview-item{
+        border-color: transparent;
+        margin: 5% 0;
+    }
+
+    .invitation-button{
+        margin-top: 5%;
+        border-color: transparent;
+        background-color: var(--textColor);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 60%;
+        padding: 2% 0;
+        border-radius: 2rem;
+        margin-bottom: 2%;
+    }
+
+    .btn-overlay-i{
+        background-color: transparent;
+        width: 5vw;
+        position: absolute;
+        left: 1%;
+        top: 1%;
+        border-color: transparent;
+    }
+
+    .img-btn-overlay-i{
+        background-color: transparent;
+        width: 5vw;
+    }
+}
+
 @media (max-width:600px) {
+
+    .ref-i{
+        background-color: transparent;
+    }
+
+    .btn-overlay-i{
+        background-color: transparent;
+        width: 5vw;
+        position: absolute;
+        left: 1%;
+        top: 1%;
+        border-color: transparent;
+    }
+
+    .img-btn-overlay-i{
+        background-color: transparent;
+        width: 5vw;
+    }
+
     .main-container-invitation{
         height: 100vh;
         width: 100vw;
