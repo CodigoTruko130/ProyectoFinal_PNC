@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bgColor: #003C43;
+    --textColor: #0B666A;
+}
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+p{
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+@media(max-width: 600px){
+    /* src/components/HoverMenu.css */
+    .menu-container {
+        position: relative;
+        display: inline-block;
+        margin-top: 5%;
+        margin-right: 1%;
+      }
+      
+      .menu-item {
+        display: inline-block;
+        cursor: pointer;
+      }
+      
+      .profile-info {
+        display: flex;
+        align-items: center;
+      }
+      
+      .profile-nav-menu {
+        width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: 50px;
+        border-radius: 50%; /* Esto hará que la imagen sea circular */
+        margin-right: 10px;
+      }
+      
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 0%;
+        right: 0;
+        background-color: white;
+        width: 50vw;
+        z-index: 1;
+        padding: 10% 5%;
+        border-radius: 10px;    
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+      
+      .menu-item:hover .dropdown-content {
+        display: block;
+      }
+    
+      #user{
+        background-color: transparent;
+        width: 15px;
+        margin-right: 1%;
+      }
+      
+      #edit{
+        background-color: transparent;
+        width: 20px;
+        margin-right: 1%;
+      }
+      
+      #exit{
+        background-color: transparent;
+        width: 20px;
+        margin-right: 1%;
+      }
+    
+      .profile{
+        width: 15vw;
+      }
+    
+    }
+
+@media(min-width: 900px){
+    /* src/components/HoverMenu.css */
+    .menu-container {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .menu-item {
+        display: inline-block;
+        cursor: pointer;
+      }
+      
+      .profile-info {
+        display: flex;
+        align-items: center;
+      }
+      
+      .profile-nav-menu {
+        width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: 50px;
+        border-radius: 50%; /* Esto hará que la imagen sea circular */
+        margin-right: 10px;
+      }
+      
+      .profile-name {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 0%;
+        right: 0;
+        background-color: white;
+        width: 20vw;
+        z-index: 1;
+        padding: 10% 5%;
+        border-radius: 10px;    
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+      
+      .menu-item:hover .dropdown-content {
+        display: block;
+      }
+    
+      #user{
+        background-color: transparent;
+        width: 15px;
+        margin-right: 1%;
+      }
+      
+      #edit{
+        background-color: transparent;
+        width: 20px;
+        margin-right: 1%;
+      }
+      
+      #exit{
+        background-color: transparent;
+        width: 20px;
+        margin-right: 1%;
+      }
+    
+      .profile{
+        width: 8vw;
+      }
+    
+    }

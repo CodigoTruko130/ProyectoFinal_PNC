@@ -8,7 +8,7 @@ function Overview() {
             <img src="profile.png" alt="" className='profile-overview-img'/>
             <div className="names">
                 <p className='name'>Rodrigo Mona</p>
-                <p className='email'>rodan19@uca.edu.sv</p>
+                <p className='user'>Antares</p>
             </div>
         </div>
     </>

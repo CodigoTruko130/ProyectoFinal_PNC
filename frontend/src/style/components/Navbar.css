@@ -41,3 +41,45 @@ p{
         margin: 5% 0 0 2%;
     }
 }
+
+@media(min-width:900px){
+    .main-container-nav{
+        height: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        background-color: white;
+    }
+
+    .image-container-nav{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .house-little{
+        width: 20%;
+    }
+
+    .profile-nav{
+        width: 10vh;
+        margin: 5% 2% 0 0;
+        background-color: transparent;
+    }
+
+    .notification{
+        width: 15vh;
+        margin: 5% 0 0 2%;
+        background-color: transparent;
+        display: none;
+    }
+
+    .notification-dark{
+        width: 6vh;
+        margin: 5% 0;
+        background-color: transparent;
+        display: none;
+    }
+}

@@ -44,6 +44,13 @@ p{
         margin: 3%;
     }
 
+    .notification-dark{
+        display: none;
+    }
+
+    .house-little{
+        width: 20%;
+    }
 
     .btn-image{
         width: 100%;
@@ -55,4 +62,97 @@ p{
         align-items: center;
         justify-content: center;
     }
+
+    .navbar-container-pc{
+        display: none;
+    }
+
+    .profile-nav-option{
+        display: none;
+    }
+
+    .column-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+@media(min-width:900px){
+    .navbar-container-mobile{
+        display: none;
+    }
+
+    .main-container-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .qr{
+        width: 20%;
+        padding: 2%;
+        background-color: #FFFFFF;
+        margin-top: 0%;
+        margin-bottom: 1%;
+    }
+
+    .main-btn{
+        width: 20%;
+        padding: 1% 0;
+        font-weight: bold;
+        font-size: medium;
+        margin: 1% 0;
+        border-color: transparent;
+        border-radius: 10px;
+    }
+
+    .action-btn{
+        border-color: transparent;
+        border-radius:  100vh;
+        width: 1vw;
+        padding: 3.5% 4%;
+        margin: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .btn-image{
+        background-color: white;
+        width: 4vw;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: transparent;
+        width: 10vh;
+    }
+
+    .column-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .profile-nav-option{
+        position: fixed;
+        width: 8vw;
+        background-color: transparent;
+        border-color: black solid 2px;
+        top: 2%;
+        right: 2%;
+    }
+
 }
