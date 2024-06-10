@@ -1,5 +1,4 @@
 import React from 'react'
-import MenuHover from './MenuHover'
 import "../style/components/Navbar.css"
 
 function Navbar() {
@@ -12,7 +11,6 @@ function Navbar() {
                 <img src="house-logo.png" alt="" className='house-little'/>
                 <p className='subtitle-little'>HVLS</p>
             </div>
-            <MenuHover/>
         </div>
     </>
   )

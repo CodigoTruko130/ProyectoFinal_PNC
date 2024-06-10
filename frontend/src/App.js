@@ -37,13 +37,11 @@ function App() {
           <Route path='/GenerateQR' element={<GenerateQR />}></Route>
           <Route path='/Profile' element={<Profile />}></Route>
           <Route path='/EditProfile' element={<EditProfile />}></Route>
-          <Route path='/ScanQRA' element={<ScanQR />}></Route>
+          <Route path='/ScanQRA' element={<ScanQRA />}></Route>
 
           {/* LAS DE ABAJO DESPUES SE QUITAN */}
           <Route path='/UserView' element={<UserView />}></Route>
           
-          <Route path='/ScanQRA' element={<ScanQR />}></Route>
-
         </Routes>
       </Router>
     </>

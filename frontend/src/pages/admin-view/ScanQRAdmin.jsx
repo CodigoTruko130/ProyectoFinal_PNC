@@ -75,12 +75,7 @@ function ScanQR() {
 
   return (
     <div className="main-scan-container">
-      <div className="back-container">
-        <button onClick={navToMainGuardView} className="back-button">
-          <img src="./GuardView/whiteBack.png" className="back-img" alt="Boton para ir hacia pagina anterior." />
-        </button>
-      </div>
-
+      <button className='btn-overlay-i'><a href="main" className='ref-i'><img src="icons/back-white.png" alt=""className='img-btn-overlay-i'/></a></button>
       <p className="main-title">Escanear Código QR</p>
       <div className="camera-container">
         <video ref={videoRef} className="camera-view" autoPlay playsInline />

@@ -1,74 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-:root{
-    --bgColor: #003C43;
-    --bgColor2: #0DC595;
-    --textColor: #0B666A;
+:root {
+  --bgColor: #003c43;
+  --bgColor2: #0dc595;
+  --textColor: #0b666a;
 }
 
-*{
-    font-family: "Montserrat", sans-serif;
+* {
+  font-family: "Montserrat", sans-serif;
 }
 
-p{
-    color: #FFFFFF;
-    margin: 0;
-    padding: 0;
+p {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
-@media(max-width:600px){
-    .main-container-menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        background-color: white;
-    }
+@media (min-width: 900px) {
+    
+  .main-container-menu {
+    position: fixed; /* or absolute, depending on your layout */
+    top: 0;
+    right: 0;
+    width: 15vw; /* Ajusta el ancho según sea necesario */
+    background-color: white;
+    z-index: 1000; /* Ajusta según sea necesario para asegurarte de que esté por encima de otros elementos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Opcional, para darle un efecto de sombra */
+    padding: 20px;
+    overflow-y: auto; /* Si el contenido puede ser más alto que la ventana */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
 
-    .user{
-        display: flex;
-        background-color: white;
-    }
+  .user {
+    display: flex;
+    background-color: white;
+  }
 
-    .user-info{
-        display: flex;
-        flex-direction: column;
-        background-color: transparent;
-        align-items: flex-start;
-        justify-content: center;
-        margin-left: 5%;
-    }
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 5%;
+  }
 
-    .subtitle-menu{
-        font-weight: bold;
-        color: black;
-        background-color: transparent;
-    }
+  .subtitle-menu {
+    font-weight: bold;
+    color: black;
+    background-color: transparent;
+  }
 
-    .text-menu{
-        background-color: transparent;
-        color: black;
-        font-size: x-small;
-    }
+  .text-menu {
+    background-color: transparent;
+    color: black;
+    font-size: x-small;
+  }
 
-    .profile-menu{
-        width: 15%;
-        background-color: transparent;
-    }
+  .profile-menu {
+    width: 25%;
+    background-color: transparent;
+  }
 
-    .menu-options{
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        margin-top: 1%;
-    }
+  .menu-options {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 1%;
+  }
 
-    .menu-option{
-        background-color: white;
+  .menu-option {
+    border-color: transparent;
+        width: 100%;
+        padding: 12px 16px;
         display: flex;
         align-items: center;
+        font-size: medium;
+  }
+
+  .menu-text {
+    background-color: transparent;
+    color: black;
+  }
+
+  .menu-icon {
+    background-color: transparent;
+    width: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container-menu {
+    position: fixed; /* or absolute, depending on your layout */
+    top: 0;
+    right: 0;
+    width: 15vw; /* Ajusta el ancho según sea necesario */
+    background-color: white;
+    z-index: 1000; /* Ajusta según sea necesario para asegurarte de que esté por encima de otros elementos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Opcional, para darle un efecto de sombra */
+    padding: 20px;
+    overflow-y: auto; /* Si el contenido puede ser más alto que la ventana */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .user {
+    display: flex;
+    background-color: white;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 5%;
+  }
+
+  .subtitle-menu {
+    font-weight: bold;
+    color: black;
+    background-color: transparent;
+  }
+
+  .text-menu {
+    background-color: transparent;
+    color: black;
+    font-size: x-small;
+  }
+
+  .profile-menu {
+    width: 15%;
+    background-color: transparent;
+  }
+
+  .menu-options {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 1%;
+  }
+
+  .menu-option {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 3% 0;
+  }
+
+  .menu-text {
+    background-color: transparent;
+    color: black;
+  }
+
+  .menu-icon {
+    background-color: transparent;
+    width: 25px;
+  }
+}
         justify-content: flex-start;
         margin: 3% 0;
     }
