@@ -19,17 +19,15 @@ function GuardMain() {
     return (
         <>
             <div className="main-container">
-                <div className="top-bar-container">
-                    <button className="notification-button">
-                        <img src="./noNotification.png" className="notification-img" alt="Notificación" />
-                    </button>
-                    <div className="tittle-container">
-                        <img src="./house.png" className="house-img" alt="Inicio" />
-                        <p className="tittle-text">HLVS</p>
-                    </div>
-                    <button className="profile-button">
-                        <img src="/profile.png" className="profile-img" alt="Perfil" />
-                    </button>
+    
+                <div className="profile-nav-option">
+                    <MenuHover showOverlay={showOverlay}/>
+                    {isOverlayVisible &&(
+                        <div className="overlay">
+                            {overlayComponent === 'Profile' && <Profile hideOverlay={hideOverlay} />}
+                            {overlayComponent === 'EditProfile' && <EditProfile hideOverlay={hideOverlay} />}
+                        </div>
+                    )}
                 </div>
 
                 <div className="qr-container">

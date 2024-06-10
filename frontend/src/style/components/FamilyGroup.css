@@ -56,18 +56,28 @@ p{
         align-items: center;
         justify-content: flex-start;
         border-bottom: black 1px solid;
+        width: 70vw;
+        height: 15vh;
     }
 
     .hp-img{
         background-color: transparent;
-        width: 15%;
+        width: 10%;
     }
 
     .hp-title{
         background-color: transparent;
         color: black;
         font-weight: bold;
-        font-size: larger;
+        font-size: xx-large;
         margin-left: 5%;
+    }
+
+    .ref-fg{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: transparent;
+        text-decoration: none;
     }
 }
