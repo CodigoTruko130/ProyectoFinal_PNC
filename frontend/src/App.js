@@ -10,6 +10,8 @@ import ScanQR from './pages/GuardView/ScanQR';
 import RegisterVisit from './pages/GuardView/RegisterVisit';
 import ListOfVisits from './pages/GuardView/ListOfVisits';
 import GenerateQR from './pages/QR/GenerateQR';
+import Profile from './components/Profile';
+import EditProfile from './components/EditProfile';
 import './App.css';
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <Route path='/RegisterVisit' element={<RegisterVisit />}></Route>
           <Route path='/ListOfVisits' element={<ListOfVisits />}></Route>
           <Route path='/GenerateQR' element={<GenerateQR />}></Route>
+          <Route path='/Profile' element={<Profile />}></Route>
+          <Route path='/EditProfile' element={<EditProfile />}></Route>
         </Routes>
       </Router>
     </>

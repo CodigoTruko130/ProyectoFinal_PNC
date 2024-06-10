@@ -20,7 +20,7 @@ b{
     background-color: transparent;
 }
 
-@media(max-width:600px) {
+@media(min-width:900px) {
     .main-container-profile{
         background-color: white;
         display: flex;
@@ -29,7 +29,132 @@ b{
         align-items: center;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        width: 35vw;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-bottom: 10%;
     }
+
+    .btn-overlay{
+        width: 5vw;
+        background-color: transparent;
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        border-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-overlay:hover{
+        background-color: #F2F2F2;
+        border-color: transparent;
+        border-radius: 5px;
+    }
+
+    .img-btn-overlay{
+        width: 2vw;
+        background-color: transparent;
+
+    }
+
+    .profile-info-img{
+        background-color: transparent;
+        width: 20%;
+        margin-top: 5%;
+    }
+
+    .subtitle-profile{
+        background-color: transparent;
+        color: black;
+        font-size: larger;
+        font-weight: bold;
+        margin-top: 1%;
+    }
+
+    .text-profile{
+        background-color: transparent;
+        color: black;
+        font-size: small;
+    }
+
+    .home-info{
+        background-color: transparent;
+        color: black;
+        margin-top: 5%;
+    }
+
+    .title{
+        background-color: transparent;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 5%;
+    }
+
+    .info-grid{
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        border-color: transparent;
+        background-color: white;
+        height: 100%;
+    }
+
+    .column-profile{
+        background-color: white;
+        border-color: transparent;
+        margin-top: 5%;
+    }
+
+    .grid-title{
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        border-color: transparent;
+    }
+    
+    .grid-info{
+        background-color: white;
+        color: black;
+        border-color: transparent;
+    }
+}
+
+@media(max-width:600px) {
+    .main-container-profile{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-bottom: 10%;
+        border-radius: 15px;
+    }
+
+    .btn-overlay{
+        width: 5vw;
+        background-color: transparent;
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        border-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-overlay:hover{
+        background-color: #F2F2F2;
+        border-color: transparent;
+        border-radius: 5px;
+    }
+
+    
 
     .profile-info-img{
         background-color: transparent;
