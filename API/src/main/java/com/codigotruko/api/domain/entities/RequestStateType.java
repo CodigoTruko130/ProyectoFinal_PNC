@@ -9,14 +9,14 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "entry_types")
-public class EntryType {
+@Table(name = "requestype")
+public class RequestStateType {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String name;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "type", fetch = FetchType.LAZY)
-    private List<Entry> entries;
+    @OneToMany(mappedBy = "request_state", fetch = FetchType.LAZY)
+    private List<Request> requests;
 }

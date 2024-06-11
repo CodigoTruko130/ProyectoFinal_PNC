@@ -3,7 +3,6 @@ package com.codigotruko.api.domain.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.apache.coyote.Request;
 import org.hibernate.annotations.ColumnDefault;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -39,18 +38,15 @@ public class User implements UserDetails {
     private List<Entry> entries;
 
 
-    /*
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_request",
             joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "entryrequest_id")
+            inverseJoinColumns = @JoinColumn(name = "request_id")
     )
-    List<EntryRequest> requests;
+    List<Request> requests;
 
-
-     */
 
     @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)

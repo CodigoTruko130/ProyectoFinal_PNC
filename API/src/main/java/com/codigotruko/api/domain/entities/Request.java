@@ -12,8 +12,8 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "entry_request")
-public class EntryRequest {
+@Table(name = "requests")
+public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -22,11 +22,12 @@ public class EntryRequest {
     private LocalTime checkIn_Hour;
     private LocalTime checkOut_Hour;
 
-/*
+    @ManyToOne(fetch = FetchType.EAGER)
+    private RequestStateType request_state;
+
     @JsonIgnore
-    @ManyToMany(mappedBy = "entry_request")
+    @ManyToMany(mappedBy = "requests")
     List<User> users;
 
 
- */
 }
