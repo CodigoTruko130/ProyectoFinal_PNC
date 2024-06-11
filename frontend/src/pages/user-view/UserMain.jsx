@@ -11,9 +11,9 @@ function Main() {
 
   const navigate = useNavigate();
 
-  // const navToInvitation = () => {
-  //   navigate('/MemberInv');
-  // };
+  const navToRequest = () => {
+     navigate('/RequestVisit');
+   };
   
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [overlayComponent, setOverlayComponent] = useState(null);
@@ -52,7 +52,7 @@ function Main() {
             <Navbar />
           </div>
           <img src="qr.png" alt="" className="qr" />
-          <button className="main-btn">SOLICITAR INVITACIÓN</button>
+          <button className="main-btn" onClick={navToRequest}>SOLICITAR INVITACIÓN</button>
         </div>
       </div>
     </>

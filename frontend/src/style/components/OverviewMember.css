@@ -50,14 +50,14 @@ p{
 }
 
 @media (max-width:600px) {
-    .main-container-overview{
+    .main-container-overview-m{
         background-color: white;
         display: flex;
         justify-content: flex-start;
         align-items: center;
     }
 
-    .profile-overview-img{
+    .profile-overview-img-member{
         background-color: transparent;
         width: 25%;
     }

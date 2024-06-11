@@ -91,7 +91,7 @@ p{
 }
 
 @media (max-width:600px) {
-    .main-container-invitation{
+    .main-container-members{
         height: 100vh;
         width: 100vw;
         background-color: white;
@@ -101,7 +101,7 @@ p{
         flex-direction: column;
     }
 
-    .main-title-i{
+    .main-title-m{
         background-color: transparent;
         color: black;
         font-size: 2rem;

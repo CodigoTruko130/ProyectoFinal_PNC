@@ -42,6 +42,7 @@ p{
         width: 20%;
         padding: 3.5% 4%;
         margin: 3%;
+        background-color: white;
     }
 
     .notification-dark{
@@ -92,6 +93,10 @@ p{
 
       .notification-btn{
         display: none;
+      }
+
+      .main-btn{
+        background-color: white;
       }
 }
 
