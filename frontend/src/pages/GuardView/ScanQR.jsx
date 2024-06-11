@@ -58,7 +58,8 @@ function ScanQR() {
         if (code) {
           console.log('QR Code found:', code.data);
           setScanning(false);
-          toast(`QR Code found: ${code.data}`); // Muestra un toast con los datos del QR
+          // Estilo personalizado para el toast
+          toast(`QR Code found: ${code.data}`);
         } else {
           requestAnimationFrame(drawFrame);
         }

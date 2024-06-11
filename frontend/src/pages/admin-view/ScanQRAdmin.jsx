@@ -83,7 +83,7 @@ function ScanQR() {
         <video ref={videoRef} className="camera-view" autoPlay playsInline />
         <canvas ref={canvasRef} className="camera-canvas" style={{ display: 'none' }} />
       </div>
-      <ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+      <ToastContainer Style={{backgroundColor: 'transparent'}} toastStyle={{ backgroundColor: 'white' }}  position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </div>
   );
 }
