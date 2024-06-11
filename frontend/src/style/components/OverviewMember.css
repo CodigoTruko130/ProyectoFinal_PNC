@@ -17,12 +17,12 @@ p{
 }
 
 @media (min-width:900px){
-    .main-container-overview-i{
+    .main-container-overview-m{
         background-color: white;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        height: 15vh;
+        height: 5vh;
         margin: 0;
     }
 

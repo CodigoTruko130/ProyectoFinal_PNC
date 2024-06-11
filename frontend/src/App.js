@@ -12,9 +12,21 @@ import ListOfVisits from './pages/GuardView/ListOfVisits';
 import GenerateQR from './pages/QR/GenerateQR';
 import Profile from './components/Profile';
 import EditProfile from './components/EditProfile';
-import ScanQRA from './pages/admin-view/ScanQRAdmin';
 
+/* SE BORRAN DESPUES */
+import ScanQRA from './pages/admin-view/ScanQRAdmin';
 import ListOfVisitsAdmin from './pages/admin-view/ListOfVisits';
+
+import OwnerView from './pages/family-owner-view/OwnerMain'
+import FamilyOwner from './pages/family-owner-view/Family';
+import OwnerEditMembers from './pages/family-owner-view/Members';
+import OwnerInv from './pages/family-owner-view/Invitation';
+import OwnerSearch from './pages/family-owner-view/Search';
+
+import MemberMain from './pages/family-member-view/MemberMain';
+import MemberInv from './pages/family-member-view/Invitation';
+
+import UserMain from './pages/user-view/UserMain';
 
 import './App.css';
 
@@ -40,6 +52,17 @@ function App() {
           {/* DESPUES SE BORRA */}
           <Route path='/ScanQRA' element={<ScanQRA />}></Route>
           <Route path='/ListOfVisitsA' element={<ListOfVisitsAdmin />}></Route>
+
+          <Route path='/OwnerView' element={<OwnerView />}></Route>
+          <Route path='/FamilyOwner' element={<FamilyOwner />}></Route>
+          <Route path='/OwnerEditM' element={<OwnerEditMembers />}></Route>
+          <Route path='/OwnerInv' element={<OwnerInv />}></Route>
+          <Route path='/OwnerSearch' element={<OwnerSearch/>}></Route>
+
+          <Route path='/MemberView' element={<MemberMain />}></Route>
+          <Route path='/MemberInv' element={<MemberInv />}></Route>
+
+          <Route path='/UserView' element={<UserMain />}></Route>
 
         </Routes>
       </Router>
