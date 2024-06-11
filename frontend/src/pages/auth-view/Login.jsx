@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 import "../../style/auth-view/Login.css";
 
 function Login() {
-  // Solo para el menu de ahorita.
-  const [selectedOption, setSelectedOption] = useState("");
+  // Establece 'admin' como el valor predeterminado para selectedOption
+  const [selectedOption, setSelectedOption] = useState("admin");
   const navigate = useNavigate();
 
   function handleLogin(response) {
-    const token = response.credential; // Aquí usas el valor de 'credential' que recibiste
+    const token = response.credential;
     const decoded = jwtDecode(token);
     const postData = {
       name: decoded.name,
@@ -35,7 +35,6 @@ function Login() {
       });
   }
 
-  // Solo para el menu de ahorita.
   function handleSelectChange(event) {
     setSelectedOption(event.target.value);
     console.log("Opción seleccionada:", event.target.value);
@@ -44,16 +43,13 @@ function Login() {
   function handleNavigate() {
     if (selectedOption === "admin") {
       navigate("/Main");
-    }
-    if (selectedOption === "owner") {
-      navigate("/HouseOwnerView");
-    }
-    if (selectedOption === "member") {
-    }
-    if (selectedOption === "user") {
+    } else if (selectedOption === "owner") {
+      navigate("/OwnerView");
+    } else if (selectedOption === "member") {
+      navigate("/MemberView");
+    } else if (selectedOption === "user") {
       navigate("/UserView");
-    }
-    if (selectedOption === "guard") {
+    } else if (selectedOption === "guard") {
       navigate("/GuardView/");
     }
   }
@@ -70,35 +66,24 @@ function Login() {
         </div>
 
         <div className="column-login-op">
-          {/* <GoogleLogin
-            onSuccess={(credentialResponse) => {
-              handleLogin(credentialResponse);
-            }}
-            onError={() => {
-              console.log("Login Failed");
-            }}
-          /> */}
-
-          {/* DESPUES SE BORRA ESTO */}
           <div className="button-container">
             <button onClick={handleNavigate} className="login-btn">
               <img src="google.png" alt="" className="google" />
               <p className="main-text">LOGIN WITH GOOGLE</p>
             </button>
-            {/* Menú desplegable justo debajo del botón de Google */}
-          <div className="dropdown-container">
-            <select
-              value={selectedOption}
-              onChange={handleSelectChange}
-              className="dropdown"
-            >
-              <option value="admin">Admin View</option>
-              <option value="owner">House Owner View</option>
-              <option value="member">House Member View</option>
-              <option value="user">User View</option>
-              <option value="guard">Guard View</option>
-            </select>
-          </div>
+            <div className="dropdown-container">
+              <select
+                value={selectedOption}
+                onChange={handleSelectChange}
+                className="dropdown"
+              >
+                <option value="admin">Admin View</option>
+                <option value="owner">House Owner View</option>
+                <option value="member">House Member View</option>
+                <option value="user">User View</option>
+                <option value="guard">Guard View</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -107,6 +92,7 @@ function Login() {
 }
 
 export default Login;
+
 
 // ***************** PROBANDO, FALTA ARREGLARLO ***************** \\
 // // Login.js
