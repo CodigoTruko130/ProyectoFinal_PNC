@@ -47,14 +47,34 @@ p{
 
 @media(max-width:600px){
     
+    .main-container-invitation-f{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: white;
+    }
+
+    .main-title-i{
+        margin-top: 5%;
+    }
+
+    .overview-container-f{
+        height: 100vh;
+        background-color: white;
+        margin-top: 5%;
+    }
+
     .overview-item-f{
         border-color: transparent;
         margin: 5% 0;
     }
 
     .add-btn-f{
-        margin-top: 5%;
+        margin-top: 10%;
         border-color: transparent;
+        background-color: transparent;
         color: black;
         font-size: larger;
         font-weight: bold;

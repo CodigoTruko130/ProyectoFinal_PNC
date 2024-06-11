@@ -27,6 +27,7 @@ import MemberMain from './pages/family-member-view/MemberMain';
 import MemberInv from './pages/family-member-view/Invitation';
 
 import UserMain from './pages/user-view/UserMain';
+import RequestVisit from './pages/user-view/RequestVisit';
 
 import './App.css';
 
@@ -63,6 +64,7 @@ function App() {
           <Route path='/MemberInv' element={<MemberInv />}></Route>
 
           <Route path='/UserView' element={<UserMain />}></Route>
+          <Route path='/RequestVisit' element={<RequestVisit />}></Route>
 
         </Routes>
       </Router>

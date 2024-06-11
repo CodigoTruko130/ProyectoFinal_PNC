@@ -72,7 +72,7 @@ function ScanQR() {
     <div className="main-scan-container">
       <div className="back-container">
         <button onClick={navToMainGuardView} className="back-button">
-          <img src="./GuardView/whiteBack.png" className="back-img" alt="Boton para ir hacia pagina anterior." />
+          <img src="./GuardView/whiteBack.png" className="back-img-admin" alt="Boton para ir hacia pagina anterior." />
         </button>
       </div>
 

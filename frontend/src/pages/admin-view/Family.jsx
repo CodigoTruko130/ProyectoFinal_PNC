@@ -8,10 +8,10 @@ function Family() {
 
   return (
     <>
-    <div className="main-container-invitation">
+    <div className="main-container-invitation-f">
       <button className='btn-overlay-i'><a href="main" className='ref-i'><img src="icons/back.png" alt=""className='img-btn-overlay-i'/></a></button>
             <p className='main-title-i'>GRUPOS FAMILIARES</p>
-            <div className="overview-container" style={{ overflow: 'auto', maxHeight: '400px', alignItems: 'flex-start' }}>
+            <div className="overview-container-f" style={{ overflow: 'auto', maxHeight: '400px', alignItems: 'flex-start' }}>
                 {Array.from({ length: numberOfMembers }).map((_, index) => (
                     <div key={index} className="overview-item-f">
                         {/*index === 0 && <p className="owner-label">(Owner)</p>*/}
