@@ -35,7 +35,7 @@ function RegisterVisit() {
                 </button>
             </div>
             <div className="regVisit-main">
-                <p className="reg-text">Registrar Visita</p>
+                <p className="reg-text">Solicitar Visita</p>
                 <input className="regVisit-input" placeholder="Destino" />
                 <textarea
                     className="regVisit-reason-input"

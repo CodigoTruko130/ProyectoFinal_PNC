@@ -12,8 +12,8 @@ function Profile({hideOverlay}) {
   return (
   <>
     <div className="main-container-profile" onClick={handleOverlayClick}>
-      <button onClick={hideOverlay} className='btn-overlay'><img src="icons/back.png" alt=""className='img-btn-overlay'/></button>
-      <img src="profile.png" alt="" className='profile-info-img'/>
+      <button onClick={hideOverlay} className='btn-overlay'><img src="/icons/back.png" alt=""className='img-btn-overlay'/></button>
+      <img src="/profile.png" alt="" className='profile-info-img'/>
       <p className='subtitle-profile'>Rodrigo Mona (owner)</p>
       <p className="text-profile">Ancient anubis</p>
       <p className='home-info'><b>Grupo Familiar:</b> Casa Caballero Guerrero</p>

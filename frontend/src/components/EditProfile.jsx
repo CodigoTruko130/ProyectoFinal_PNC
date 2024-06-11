@@ -11,8 +11,8 @@ import "../style/components/EditProfile.css"
   return (
     <>
       <div className="main-container-edit" onClick={handleOverlayClick}>
-      <button onClick={hideOverlay} className='btn-overlay'><img src="icons/back.png" alt=""className='img-btn-overlay'/></button>
-      <img src="profile.png" alt="" className='profile-edit-img'/>
+      <button onClick={hideOverlay} className='btn-overlay'><img src="/icons/back.png" alt=""className='img-btn-overlay'/></button>
+      <img src="/profile.png" alt="" className='profile-edit-img'/>
       <p className='text'>¿Desdeas cambiar tus datos?</p>
       <input type="text" className="edit" placeholder='Nombre de usuario'/>
       <input type="text" className="edit" placeholder='Nombre'/>

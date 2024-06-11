@@ -1,13 +1,15 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import jsQR from 'jsqr';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../../style/GuardView/ScanQR.css';
 
 function ScanQR() {
   const navigate = useNavigate();
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
-  const [scanning, setScanning] = useState(false);
+  const [scanning, setScanning] = useState(true);
 
   const navToMainGuardView = () => {
     navigate('/GuardView/');
@@ -22,6 +24,7 @@ function ScanQR() {
             videoRef.current.srcObject = stream;
             videoRef.current.onloadedmetadata = () => {
               videoRef.current.play();
+              scanQRCode();
             };
           }
         } catch (error) {
@@ -40,32 +43,31 @@ function ScanQR() {
   }, []);
 
   const scanQRCode = () => {
-    if (videoRef.current && canvasRef.current) {
-      const canvas = canvasRef.current;
-      const context = canvas.getContext('2d');
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
 
-      const drawFrame = () => {
-        if (scanning) {
-          if (videoRef.current.readyState === videoRef.current.HAVE_ENOUGH_DATA) {
-            canvas.width = videoRef.current.videoWidth;
-            canvas.height = videoRef.current.videoHeight;
-            context.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
+    const drawFrame = () => {
+      if (scanning && videoRef.current.readyState === videoRef.current.HAVE_ENOUGH_DATA) {
+        canvas.width = videoRef.current.videoWidth;
+        canvas.height = videoRef.current.videoHeight;
+        context.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
 
-            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-            const code = jsQR(imageData.data, imageData.width, imageData.height);
+        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+        const code = jsQR(imageData.data, imageData.width, imageData.height);
 
-            if (code) {
-              console.log('QR Code found:', code.data);
-              setScanning(false); // Stop scanning after finding a QR code
-              // Aquí puedes hacer algo con el código QR leído
-            }
-          }
+        if (code) {
+          console.log('QR Code found:', code.data);
+          setScanning(false);
+          toast(`QR Code found: ${code.data}`); // Muestra un toast con los datos del QR
+        } else {
           requestAnimationFrame(drawFrame);
         }
-      };
+      } else {
+        requestAnimationFrame(drawFrame);
+      }
+    };
 
-      drawFrame();
-    }
+    drawFrame();
   };
 
   return (
@@ -81,7 +83,7 @@ function ScanQR() {
         <video ref={videoRef} className="camera-view" autoPlay playsInline />
         <canvas ref={canvasRef} className="camera-canvas" style={{ display: 'none' }} />
       </div>
-
+      <ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </div>
   );
 }
