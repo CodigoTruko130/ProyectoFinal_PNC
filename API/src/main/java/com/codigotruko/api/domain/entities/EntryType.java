@@ -16,5 +16,7 @@ public class EntryType {
     private UUID id;
     private String name;
 
-
+    @JsonIgnore
+    @OneToMany(mappedBy = "type", fetch = FetchType.LAZY)
+    private List<Entry> entry;
 }

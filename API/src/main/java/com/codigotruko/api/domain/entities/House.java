@@ -24,6 +24,8 @@ public class House {
     @OneToMany(mappedBy = "house", fetch = FetchType.LAZY)
     private List<User> residents;
 
-
+    @JsonIgnore
+    @OneToMany(mappedBy = "house", fetch = FetchType.LAZY)
+    private List<Entry> entries;
 
 }

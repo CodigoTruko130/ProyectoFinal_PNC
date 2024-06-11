@@ -21,12 +21,14 @@ public class Entry {
 
 
 
-    //@ManyToOne(fetch = FetchType.EAGER)
-    //private User visitor;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User visitor;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    private EntryType type;
 
-    //@ManyToOne(fetch = FetchType.EAGER)
-    //private House house;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private House house;
 
 }
 
